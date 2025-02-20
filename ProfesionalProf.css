@@ -552,26 +552,74 @@ footer {
     background-color: #f5f7e2;
     padding: 50px 0;
     z-index: -1;
+    height: 110vh;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    position: absolute;
+
+}
+
+.logos img {
+    height: 80px;
+    gap: 30px;
+    margin: 40px;
+
+}
+
+.dscycle {
+    position: absolute;
+    bottom: 24%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 90px;
+}
+
+.dscycle img {
+    width: 320px;
 }
 
 
+.dacycle {
+    position: absolute;
+    bottom: 24%;
+    right: 0; /* Asegura que se pegue a la derecha */
+     /* Evita que ocupe todo el ancho */
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    padding: 0 20px;
+    margin-right: 10%;
+    border-radius: 90px;
+}
+
+.dacycle img {
+    width: 320px;
+}
+
 .counter-container {
     position: absolute;
-    bottom: 50%;
+    bottom: 67%;
     right: 0; /* Asegura que se pegue a la derecha */
     width: auto; /* Evita que ocupe todo el ancho */
     display: flex;
     justify-content: flex-end; /* Alinea los elementos a la derecha */
     padding: 0 20px;
-    margin-right: 45px;
+    margin-right: 160px;
     border-radius: 90px;
 }
 
 .counter-container-L {
     position: absolute;
-    bottom: 50%;
+    bottom: 67%;
     width: 100%;
-    left: 45px;
+    left: 160px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
