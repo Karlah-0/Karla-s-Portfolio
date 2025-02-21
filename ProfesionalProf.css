@@ -688,6 +688,7 @@ footer {
     justify-content: center;
     align-items: center;
     transition: transform .7s;
+    z-index: 3;
 }
 
 .gallery-button:active {
@@ -715,6 +716,7 @@ footer {
     object-fit: cover;
     transform: scale(0.5);
     transition: transform 1s;
+    z-index: 2;
 }
 
 
@@ -770,6 +772,30 @@ footer {
     transform: rotate(135deg);
 }
 
+.demos {
+    border-radius: 40px;
+    padding: 15px;
+    gap: 20px;
+    position: absolute;
+    bottom: 5%;
+    background-color: #fdeaf5;
+    font-family: 'Space Mono', serif;
+    font-weight: 400;
+}
+
+.demos img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.demos img:hover {
+    transform:scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 
 
