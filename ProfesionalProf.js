@@ -275,7 +275,105 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.querySelectorAll('.project-container').forEach(container => {
+    const desc = container.querySelector('.project-description');
+
+    container.addEventListener('mouseenter', () => {
+        desc.style.display = 'block';
+    });
+
+    container.addEventListener('mouseleave', () => {
+        desc.style.display = 'none';
+    });
+});
 
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const likeButton = document.getElementById("likeButton");
+    const likeCount = document.getElementById("likeCount");
+    const bookRecommendation = document.getElementById("bookRecommendation");
+    const bookCover = document.getElementById("bookCover"); // Imagen del libro
+
+    // Lista de libros con sus portadas
+    const books = [
+        { title: "The Little Prince - Antoine de Saint-Exupéry", cover: "covers/pp.jpg" },
+        { title: "The Prince & The  Dressmaker - Jen Wang", cover: "covers/dm.jpg" },
+        { title: "The Secret History - Donna Tartt", cover: "covers/tsh.jpg" },
+        { title: "Pride and Prejudice - Jane Austen", cover: "covers/pdp.jpg" },
+        { title: "Demian - Herman Hesse", cover: "covers/dmn.jpg" },
+        { title: "Tender is the flesh - Agustina Bazterrica", cover: "covers/titf.jpg" },
+        { title: "The Midnight Library - Matt Haig", cover: "covers/tml.jpg" },
+        { title: "Never Let Me Go - Kazuo Ishiguro ", cover: "covers/nlmg.jpg" },
+        { title: "Heartstopper - Alice Oseman", cover: "covers/htstp.jpg" },
+        { title: "Educated - Tara Westover", cover: "covers/edc.jpg" },
+        { title: "Outliers - Malcom Gladwell", cover: "covers/out.jpg" },
+        { title: "Please look after mom - Kyung Sook-Shin", cover: "covers/plam.jpg" },
+        { title: "Fever Dream - Samanta Schweblin", cover: "covers/ddr.jpg" },
+        { title: "This is not Miami - Fernanda Melchor", cover: "covers/tinm.jpg" },
+        { title: "The Pachinko Parlour - Elisa Shua Dusapin", cover: "covers/pck.jpg" },
+        { title: "A Little Life - Hanya Yanagihara", cover: "covers/tpv.jpg" },
+        { title: "Persépolis - Marjane Satrapi", cover: "covers/prsp.jpg" },
+        { title: "Almond - Won Pyung Sohn", cover: "covers/almd.jpg" },
+        { title: "To kill a Mockingbird - Harper Lee", cover: "covers/tkm.jpg" },
+        { title: "Lolita - Vladimir Nabokov", cover: "covers/llt.jpg" },
+        { title: "Strange Pictures - Uketsu", cover: "covers/stpc.jpg" },
+        { title: "The Ones Who Walk Away From Omelas - Úrsula K. LeGuin", cover: "covers/towwy.jpg" },
+        { title: "Little Women - Luisa May Alcott", cover: "covers/lw.jpg" },
+        { title: "Drácula - Bram Stoker", cover: "covers/dr.jpg" },
+        { title: "The Truth about the Harry Quebert Affair - ", cover: "covers/hq.jpg" },
+        { title: "Frankenstain - Mary Wollstonecraft Shelley", cover: "covers/ms.jpg" },
+        { title: "Macario - Bruno Traven", cover: "covers/mc.jpg" },
+        { title: "Actos Humanos - Han Kang", cover: "covers/hnk.jpg" },
+        { title: "What I Know for Sure - Oprah Winfrey", cover: "covers/op.jpg" },
+        { title: "Ikigai - Francesc Miralles and Héctor García", cover: "covers/ik.jpg" },
+        { title: "Kim Ji-Young, born in 1982 - Cho Nam-joo", cover: "covers/km.jpg" },
+        { title: "Fangs - Sarah Andersen", cover: "covers/fng.jpg" },
+        { title: "The Wrath & The Down - Renee Ahdieh", cover: "covers/twd.jpg" },
+        { title: "The Water Trench - Lydiette Carrión", cover: "covers/fda.png" },
+        { title: "Nothing - Janne Teller", cover: "covers/nd.jpg" }
+    ];
+
+// Función para mezclar la lista de libros
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Intercambio
+    }
+}
+
+// Cargar la lista de libros sin repetir
+let remainingBooks = JSON.parse(localStorage.getItem("remainingBooks"));
+if (!remainingBooks || remainingBooks.length === 0) {
+    shuffle(books);
+    remainingBooks = [...books];
+    localStorage.setItem("remainingBooks", JSON.stringify(remainingBooks));
+}
+
+// Obtener número de likes almacenado
+let likes = localStorage.getItem("likes") ? parseInt(localStorage.getItem("likes")) : 0;
+likeCount.textContent = likes;
+
+likeButton.addEventListener("click", function () {
+    likes++;
+    likeCount.textContent = likes;
+    localStorage.setItem("likes", likes); // Guardar likes
+
+    if (remainingBooks.length === 0) {
+        shuffle(books);
+        remainingBooks = [...books];
+    }
+
+    const randomBook = remainingBooks.pop(); // Extraer último libro de la lista
+    localStorage.setItem("remainingBooks", JSON.stringify(remainingBooks)); // Guardar progreso
+
+    // Mostrar el libro recomendado y la portada
+    bookRecommendation.textContent = `📖 Recommendation: ${randomBook.title}`;
+    bookCover.src = randomBook.cover;
+    bookCover.style.display = "block"; // Asegurar que la imagen sea visible
+});
+});
 
