@@ -814,21 +814,118 @@ footer {
     background: rgb(223,183,250);
     background: linear-gradient(90deg, rgba(223,183,250,1) 0%, rgba(255,196,196,1) 50%, rgba(255,181,204,1) 100%);
     padding: 50px 0;
-    z-index: -1;
 }
+.Certificates {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.Certificate {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Certificate img{
+    width: 250px;
+}
+
+.Certificate img:hover{
+    transform:scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
 #section6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: none; /* Fondo blanco para #section1 */
     position: relative;
     color: black;
     background: rgb(183,241,250);
-background: linear-gradient(90deg, rgba(183,241,250,1) 0%, rgba(228,196,255,1) 50%, rgba(97,132,255,1) 100%);
+    background: linear-gradient(90deg, rgba(183,241,250,1) 0%, rgba(228,196,255,1) 50%, rgba(97,132,255,1) 100%);
     padding: 50px 0;
-    z-index: -1;
+    height: fit-content;
+    box-sizing: border-box;
 }
+
+
+figure img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 1000ms;
+  }
+  
+  #section6 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    max-width: 100%;
+    width: 70rem;
+  }
+  
+  figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  figure::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(2);
+    transition: opacity 300ms;
+  }
+  
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 600ms, transform 600ms;
+  }
+  
+  #section6 a:is(:hover, :focus) figure::after {
+    opacity: 1;
+  }
+  
+  #section6 a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms 400ms, transform 600ms 400ms;
+  }
+  
+  #section6 a:is(:hover, :focus) img {
+    transform: scale(1.2);
+  }
+  </style>
+  
+
+
+
 
 .cormorant-garamond-regular {
     font-family: 'Cormorant Garamond', serif;
