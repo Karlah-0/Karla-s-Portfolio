@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karla's Portfolio</title>
+    <title>칼라의 포트폴리오</title>
     <link rel="icon" type="image/x-icon" href="kf.png">
     <link rel="stylesheet" href="ProfesionalProf.css">
     <link
@@ -21,48 +21,57 @@ rel="stylesheet">
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 
 <body id="home">
 
     <div id="contact">
-        <a href="#home" title="Home"><img src="lg.png" alt="Logo" style="width: 80px; margin-left: 20px; margin-top: 20%;"></a>
+        <a href="#home" title="홈으로"><img src="lg.png" alt="로고" style="width: 80px; margin-left: 20px; margin-top: 20%;"></a>
     
         <button id="contact-button" >
-        <img src="p.png" alt="Phone" style="width: 40px;" class="icon">
-        <p style="font-family:'Cormorant Garamond', serif; margin: 5px 0 0 0;">연락처</p>
+        <img src="p.png" alt="전화기" style="width: 40px;" class="icon">
+        <p style="font-family:'Cormorant Garamond', serif; margin: 5px 0 0 0;">연 락 처</p>
     </button>
     <div id="contact-icons" style="display: none;">
-        <a href="mailto:karlah.escamilla22@gmail.com" title="Send mail"><img src="m.png" alt="Email" class="icon"></a>
-        <a href="https://www.linkedin.com/in/karlaescamillag/" title="Review LinkedIn" target="_blank"><img src="in.png" alt="LinkedIn" class="icon"></a>
-        <a href="https://github.com/Karlah-0" title="Review Github" target="_blank"><img src="gt.png" alt="GitHub" class="icon"></a>
-        <a href="https://www.goodreads.com/mouklair" target="_blank" title="Review Goodreads"><img src="gr.png" alt="Goodreads" class="icon"></a>
-        <a href="https://drive.google.com/file/d/1XgmMQcSw8I9kDR0bRM5GCmzSp86vg_ye/view?usp=sharing" title="Review CV" target="_blank"><img src="cv.png" alt="CV" class="icon"></a>
+        <a href="mailto:karlah.escamilla22@gmail.com" title="이메일 보내기"><img src="m.png" alt="Email" class="icon"></a>
+        <a href="https://www.linkedin.com/in/karlaescamillag/" title="링크드인 확인" target="_blank"><img src="in.png" alt="LinkedIn" class="icon"></a>
+        <a href="https://github.com/Karlah-0" title="깃허브 확인" target="_blank"><img src="gt.png" alt="GitHub" class="icon"></a>
+        <a href="https://www.goodreads.com/mouklair" target="_blank" title="Goodreads 확인"><img src="gr.png" alt="Goodreads" class="icon"></a>
+        <a href="https://drive.google.com/file/d/1XgmMQcSw8I9kDR0bRM5GCmzSp86vg_ye/view?usp=sharing" title="이력서 보기" target="_blank"><img src="cv.png" alt="CV" class="icon"></a>
     </div>
 
     </div>
     <header>
-        <nav id="menu">
-            <ul class="dots">
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-            </ul>
-            <ul class="menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#section2" class="nav-link">기술</a></li>
-                <li><a href="#section3" class="nav-link">경험</a></li>
-                <li><a href="#section4" class="nav-link">프로젝트</a></li>
-                <li><a href="#section5" class="nav-link">자격증</a></li>
-                <li><a href="#section6" class="nav-link">과외 활동</a></li>
-            </ul>
-        </nav>
-        <div id="language-switcher">
-            <a href="ProfesionalProf_Esp.html"><button data-lang="es">ES</button></a>
-            <a href="index.html"><button data-lang="en">EN</button></a>
-            <a href="ProfesionalProf_Kor.html"><button data-lang="ko">KO</button></a>
-        </div>
+        <nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="#section1" class="navbar__link"><i data-feather="home"></i><span>홈</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section2" class="navbar__link"><i data-feather="star"></i><span>보유 기술</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section3" class="navbar__link"><i data-feather="briefcase"></i><span>경력</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section4" class="navbar__link"><i data-feather="folder"></i><span>프로젝트</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section5" class="navbar__link"><i data-feather="award"></i><span>자격증</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section6" class="navbar__link"><i data-feather="activity"></i><span>대외활동</span></a>        
+    </li>
+  </ul>
+
+  <div class="navbar__langs">
+    <a href="ProfesionalProf_Esp.html" class="lang-btn">ES</a>
+    <a href="index.html" class="lang-btn">EN</a>
+    <a href="ProfesionalProf_Kor.html" class="lang-btn active">KO</a>
+  </div>
+</nav>
     </header>
 
 
@@ -71,35 +80,35 @@ rel="stylesheet">
         <section id="section1">
             
             <div class="circular-image" id="sensitive">
-                <img src="h.jpg" alt="Perfil">
+                <img src="h.jpg" alt="프로필">
             </div>        
             <h2 class="animate__animated animate__fadeInDown"><div class="name">카를라 에스테르 <br>에스카미야 가추스</div></h2>
             
             <button id="more-details-btn">
-                <img src="pl.png" alt="More details">
+                <img src="pl.png" alt="자세히 보기">
             </button>
             
             <div id="overlay">
                 <div id="modal">
                     <span id="close-btn">&times;</span>
-                    <img src="lg.png" alt="Logo" style="width: 80px; margin-left: 20px; margin-top: 10px;">
-                    <h3>나에 대하여 </h3>
+                    <img src="lg.png" alt="로고" style="width: 80px; margin-left: 20px; margin-top: 10px;">
+                    <h3>자기소개</h3>
                     <p>
-                        코이 물고기 수영의 역경처럼 저도 성장과 변화를 받아들이고 장애물을 새로운 기회로 전환합니다.
+                        역경을 헤엄쳐 오르는 잉어처럼, 저는 장애물을 새로운 기회로 바꾸며 성장과 변화를 기꺼이 받아들입니다.
                     </p>
                     <br>
                     <p>
-                        저는 머신 러닝, 자연어 처리(NLP), 빅 데이터에 대한 탄탄한 배경 지식을 가진 데이터 전문가로, 파이썬, SQL, 테이블라우, 몽고DB에 능숙합니다. 복잡성을 명확하게 만드는 것에 열정을 가지고 있으며, Plantel Fundación Azteca Excellence Program을 졸업하고 현재 ESCOM IPN에서 데이터 과학을 공부하고 있습니다.
+                        저는 머신러닝, 자연어 처리(NLP), 빅데이터 분야의 탄탄한 배경지식을 갖춘 데이터 전문가이며, Python, SQL, Tableau, MongoDB를 능숙하게 다룹니다. 복잡한 것을 명확하게 만드는 데 열정을 쏟고 있으며, 플란텔 푼다시온 아스테카(Plantel Fundación Azteca) 영재 프로그램을 졸업하고 현재 멕시코 국립 폴리텍 대학교(ESCOM IPN)에서 데이터 사이언스를 전공하고 있습니다.
                     </p>
                     <br>
                     <p>
-                        소설, 말차, 한국 문화, 문학 소설에서 영감을 받은 여정 사이에서 저는 데이터만큼이나 제 세상을 확장하는 이야기를 탐구합니다.
+                        소설, 말차, 한국 문화, 그리고 문학 소설에서 영감을 받은 여행을 즐기며, 데이터만큼이나 제 세계를 넓혀주는 이야기들을 탐구합니다.
                     </p>
                 </div>
             </div>
             
-            <p class="space-mono-regular"><p class="typing-demo">창의적이고 통찰력 있으며 모험적입니다,</p></p>
-            <p class="space-mono-regular"><p class="typing-demo2" style="margin-top: -70px;">복잡성을 명확하게 만드는 B.S. 데이터 과학자</p></p>
+            <p class="space-mono-regular"><p class="typing-demo">창의적이고 통찰력 있으며 모험심이 강한,</p></p>
+            <p class="space-mono-regular"><p class="typing-demo2" style="margin-top: -70px;">복잡성을 명확성으로 바꾸는 데이터 사이언티스트.</p></p>
         <div class="content-wrapper2">
         <div class="carrusel-container">
             <span id="carrusel-texto" class="leBlurInBottom"></span>
@@ -110,29 +119,29 @@ rel="stylesheet">
 
 
         <section id="section2" style="height: fit-content;">
-            <h2>기술</h2>
-            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> 기술을 보려면 아이콘을 클릭하세요 </p>
+            <h2>보유 기술</h2>
+            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> 아이콘을 클릭하여 기술을 확인하세요 </p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <img src="lgg.png" class="category-icon" alt="Languages Icon">
-                    <h3 class="cssanimation hu__hu__">언어들</h3>
+                    <img src="lgg.png" class="category-icon" alt="언어 아이콘">
+                    <h3 class="cssanimation hu__hu__">외국어</h3>
                     <div class="skills-list">
                         <div class="skill">
-                            <img src="mx.png" alt="Spanish Logo">
-                            <span>스페인어 (모국어)</span>
+                            <img src="mx.png" alt="스페인어 로고">
+                            <span>스페인어 (원어민)</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="100"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="us.png" alt="English Logo">
+                            <img src="us.png" alt="영어 로고">
                             <span>영어 (C1)</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="80"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="ko.png" alt="Korean Logo">
+                            <img src="ko.png" alt="한국어 로고">
                             <span>한국어 (A2)</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="40"></div>
@@ -141,32 +150,32 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="prg.png" class="category-icon" alt="Programming Languages Icon">
+                    <img src="prg.png" class="category-icon" alt="프로그래밍 언어 아이콘">
                     <h3 class="cssanimation hu__hu__">프로그래밍 언어</h3>
                     <div class="skills-list">
                         <div class="skill">
-                            <img src="cpl.jpg" alt="C++ Logo">
+                            <img src="cpl.jpg" alt="C++ 로고">
                             <span>C++</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="py.png" alt="Python Logo">
+                            <img src="py.png" alt="Python 로고">
                             <span>Python</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="r.png" alt="R Logo">
+                            <img src="r.png" alt="R 로고">
                             <span>R</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="js.png" alt="JavaScript Logo">
+                            <img src="js.png" alt="JavaScript 로고">
                             <span>JavaScript</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="60"></div>
@@ -175,47 +184,47 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="sft.png" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">부드러운 기술</h3>
+                    <img src="sft.png" class="category-icon" alt="소프트 스킬 아이콘">
+                    <h3 class="cssanimation hu__hu__">소프트 스킬</h3>
                     <div class="skills-list softskills-grid">
                         <div class="softskill">
-                            <img src="cm.png" alt="Communication Icon">
-                            <span>효과적인 의사소통</span>
+                            <img src="cm.png" alt="의사소통 아이콘">
+                            <span>원활한 의사소통</span>
                         </div>
                         <div class="softskill">
-                            <img src="tm.png" alt="Teamwork Icon">
-                            <span>협동 작업</span>
+                            <img src="tm.png" alt="팀워크 아이콘">
+                            <span>팀워크</span>
                         </div>
                         <div class="softskill">
-                            <img src="ps.png" alt="Problem Solving Icon">
-                            <span>문제 해결</span>
+                            <img src="ps.png" alt="문제 해결 아이콘">
+                            <span>문제 해결 능력</span>
                         </div>
                         <div class="softskill">
-                            <img src="crt.png" alt="Creative Icon">
-                            <span>창의적인</span>
+                            <img src="crt.png" alt="창의성 아이콘">
+                            <span>창의력</span>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="ml.png" class="category-icon" alt="Machine Learning Icon">
-                    <h3 class="cssanimation hu__hu__">기계 학습 도구</h3>
+                    <img src="ml.png" class="category-icon" alt="머신러닝 아이콘">
+                    <h3 class="cssanimation hu__hu__">머신러닝 툴</h3>
                     <div class="skills-list">
                         <div class="skill">
-                            <img src="sc.png" alt="Scikit-Learn Logo">
+                            <img src="sc.png" alt="Scikit-Learn 로고">
                             <span>Scikit-Learn</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="tf.png" alt="TensorFlow Logo">
+                            <img src="tf.png" alt="TensorFlow 로고">
                             <span>TensorFlow</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="k.png" alt="Keras Logo">
+                            <img src="k.png" alt="Keras 로고">
                             <span>Keras</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
@@ -224,18 +233,18 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="nlp.png" class="category-icon" alt="NLP Icon">
-                    <h3 class="cssanimation hu__hu__">자연어 처리 도구</h3>
+                    <img src="nlp.png" class="category-icon" alt="NLP 아이콘">
+                    <h3 class="cssanimation hu__hu__">자연어 처리(NLP) 툴</h3>
                     <div class="skills-list">
                         <div class="skill">
-                            <img src="nk.png" alt="NLTK Logo">
+                            <img src="nk.png" alt="NLTK 로고">
                             <span>NLTK</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <img src="gn.png" alt="Gensim Logo">
+                            <img src="gn.png" alt="Gensim 로고">
                             <span>Gensim</span>
                             <div class="progress-bar">
                                 <div class="progress" data-level="90"></div>
@@ -244,43 +253,43 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="tls.png" class="category-icon" alt="Technologies Icon">
-                    <h3 class="cssanimation hu__hu__">데이터 도구 및 +기술</h3>
+                    <img src="tls.png" class="category-icon" alt="기타 툴 아이콘">
+                    <h3 class="cssanimation hu__hu__">데이터 툴 및 기타 기술</h3>
                     <div class="skills-list technologies-grid">
                         <div class="skill" id="pill-skil">
-                            <img src="sql.png" alt="SQL Logo">
+                            <img src="sql.png" alt="SQL 로고">
                             <span>SQL</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="md.png" alt="MongoDB Logo">
+                            <img src="md.png" alt="MongoDB 로고">
                             <span>MongoDB</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="or.png" alt="Oracle Logo">
+                            <img src="or.png" alt="Oracle 로고">
                             <span>OracleSQL</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="css.png" alt="HTML Logo">
+                            <img src="css.png" alt="HTML 로고">
                             <span>HTML/CSS</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="ub.svg" alt="Linux Logo">
+                            <img src="ub.svg" alt="Linux 로고">
                             <span>LinuxUbuntu</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="git.png" alt="Git Logo">
+                            <img src="git.png" alt="Git 로고">
                             <span>Git/GitHub</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="pbi.png" alt="Power BI Logo">
+                            <img src="pbi.png" alt="Power BI 로고">
                             <span>PowerBI</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="tb.png" alt="Tableau Logo">
+                            <img src="tb.png" alt="Tableau 로고">
                             <span>Tableau</span>
                         </div>
                         <div class="skill" id="pill-skil">
-                            <img src="pt.webp" alt="Packet Tracer Logo">
+                            <img src="pt.webp" alt="Packet Tracer 로고">
                             <span>PacketTracer</span>
                         </div>
                     </div>
@@ -291,203 +300,292 @@ rel="stylesheet">
         
         
         <section id="section3">
-            <h2>경험</h2>
-            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal;"><em>“지식은 경험입니다. 다른 모든 것은 단지 정보일 뿐입니다." – 알버트 아인슈타인 </em></p>
+            <h2>경력</h2>
+            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal;"><em>“지식은 경험이다. 그 외의 모든 것은 단순한 정보에 불과하다.”  – 알베르트 아인슈타인 </em></p>
            
             <div class="background-animation">
                 <div class="drop"></div>
                 <div class="wave"></div>
             </div>
 
-            <div class="dscycle">
-                <img src="dscycle.png">
-            </div>
+           
             <div class="counter-container-L">
                 <div id="academic-counter" class="counter">
-                    <h3>학문의 날</h3>
+                    <h3>학업 일수</h3>
                     <div id="academic-days">0</div>
                     <p id="academic-equivalent"></p>
                 </div>
             </div>
 
-            <div class="dacycle">
-                <img src="dacycle.png">
-            </div>
+            
             <div class="counter-container">
                 <div id="professional-counter" class="counter">
-                    <h3>직업 근무일</h3>
+                    <h3>실무 경력 일수</h3>
                     <div id="professional-days">0</div>
                     <p id="professional-equivalent"></p>
                 </div>
             </div>
+
+            <div class="fun-gallery-container">
+            <div class="gallery-item">
+                <img src="jst.png" alt="TOJIL" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">TOJIL 데이터 애널리스트 <br>범죄율 모델링 및 100% 자동화 🚓</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="cic.jpeg" alt="CIC" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">CIC IPN 자연어 처리(NLP) 연구실 연구 보조원 🤖</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="me_ibm.jpeg" alt="IBM" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">IBM 글로벌 기술 영업 인턴 🌍</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="ibm.jpeg" alt="DATA" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">IBM 데이터 및 AI 영업 학생(Sales Student)으로 승진 ✨</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="qtm.jpeg" alt="Quant" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">쑨궈화(Sun Guohua) 박사님의 양자 컴퓨팅 과정 수료 🖳</div>
+            </div>
+        </div>
+
+
+
             <div class="logos">
                 <img src="logo_ipn.png">
                 <img src="logo_es.png">
-                <img src="logo-pl.png">
+                <img src="logo_pl.png">
+                <img src="ibm.png">
                 <img src="logo_msf.png">
                 <img src="logo_csc.png">
-                <img src="logo-tj.png">
+                <img src="logo_tj.png">
             </div>
         </section>
         
 
 
         <section id="section4">
-            <h2>Projects</h2>
-            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
-                <em>"날 수 있을지 의문이 드는 순간, </em></p>
-                <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-                <em>당신은 그것을 할 수 있기 위해 영원히 멈춘다" - 피터 팬 by J.M. 배리</em>
-            </p>
-            
-            <div class="gallery">
-                <input type="checkbox" id="gallery-toggle">
-                <label for="gallery-toggle" class="gallery-button">+</label>
-                <div class="gallery-items">
-                    <div class="project">
-                        <img src="investment.jpg" alt="MIA CETSDIRECTO" style="--i:1">
-                        <div class="description">CETESDIRECTO® 투자자 지원 도구: 인플레이션의 행동과 재무 결정에 미치는 영향 모델링(파이썬, 레레시온, 머신 러닝).</div>
+    <h2>프로젝트</h2>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
+        <em>“날 수 있는지 의심하는 순간, </em></p>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
+        <em>영원히 그 능력을 잃게 된다.” – J.M. 배리, 피터팬</em>
+    </p>
+
+    <div class="grid image-grid">
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1gZsUCALPb0q2ArJP2OmHjlhNp1UNgz-e?usp=sharing">
+                    <div class="tile-img-wrapper tile-img1">
+                        <img class="tile-img" src="ai.jpg" alt="ATR-TTS">
+                        <div class="project-overlay">
+                            <strong>다국어 음성 합성기 (ATR-TTS)</strong><br>
+                            음성 인식, 기계 번역 및 음성 합성 (Whisper, NLLB, Bark, Python 활용)
+                        </div>
                     </div>
-                    <div class="project">
-                        <img src="amazon.jpg" alt="SAVE-A" style="--i:2">
-                        <div class="description">Python 및 Data Science 방법을 사용한 제품 비교기 친화적인 웹 애플리케이션, 최상의 구매 결정(Python, Web 스크래핑, EDA).</div>
-                    </div>
-                    <div class="project">
-                        <img src="library.jpg" alt="Bookry" style="--i:3">
-                        <div class="description">확장성과 보안을 위해 최적화된 데이터베이스 설계를 갖춘 MERN 기술(MongoDB, Express, React, Node.js)을 사용하는 전자 라이브러리. ESCOM 2024 엑스포에서 3위를 달성했습니다.</div>
-                    </div>
-                    <div class="project">
-                        <img src="gming.jpg" alt="PinkPacman" style="--i:4">
-                        <div class="description">C 구조와 함수를 사용하여 핑크색 미로를 사용한 팩맨 게임 시뮬레이션.</div>
-                    </div>
-                    <div class="project">
-                        <img src="pcar.jpg" alt="EDA-Public Safety" style="--i:5">
-                        <div class="description">2024년 전국 피해자 및 공공 안전 인식 조사를 위한 탐색 데이터 분석 (ENVIPE).</div>
-                    </div>
-                    <div class="project">
-                        <img src="medical.jpg" alt="Diabetes Model" style="--i:6">
-                        <div class="description">CDC(질병통제예방센터)의 당뇨병 건강 지표를 활용한 당뇨병 진단 예측 모델.</div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="demos">
-                <p style="margin-top: -.5px;">데모</p>
-                <a href="https://github.com/Karlah-0/paper-similarity" title="NLP: Document Similairty" target="_blank"><img src="keyb.jpg" alt="Similarity"></a>
-                <a href="https://github.com/Karlah-0/SAVE-A/blob/main/SAVE-A/SAVE-A.ipynb" title="SAVE-A" target="_blank"><img src="amzn.jpg" alt="SAVE-A"></a>
-                <a href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" title="공공 안전에 대한 인식" target="_blank"><img src="seg.jpg" alt="ENVIPE EDA"></a>
-                <a href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb" title="당뇨병 진단 예측" target="_blank"><img src="diabetes.jpg" alt="Diabetes Prediction"></a>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Credit-Card-Fraud-Detection/blob/main/collect/Credit_Card_Fraud_Detection_Data_Science.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img2">
+                        <img class="tile-img" src="cards.jpg" alt="Credit">
+                        <div class="project-overlay">
+                            <strong>신용카드 사기 탐지</strong><br>
+                            탐색적 데이터 분석(EDA), 예측 사기 모델링 및 가상 신용카드 데이터셋 분석.
+                        </div>
+                    </div>
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb">
+                    <div class="tile-img-wrapper tile-img3">
+                        <img class="tile-img" src="diab.jpg" alt="Diabetes">
+                        <div class="project-overlay">
+                            <strong>당뇨병 진단 예측</strong><br>
+                            CDC(미국 질병통제예방센터)의 당뇨병 건강 지표를 활용한 예측 모델.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1nP87hcrevlORvgSKpnq5O0cksqwAh-bK?usp=sharing">
+                    <div class="tile-img-wrapper tile-img4">
+                        <img class="tile-img" src="senty.jpg" alt="Sentiment Polarity">
+                        <div class="project-overlay">
+                            <strong>자연어 처리(NLP) 감성 극성 분석</strong><br>
+                            영화 리뷰 평점 기반 감성 분석 (XGBOOST, K-Means, Random Forest, SVM 모델 테스트)
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://docs.google.com/presentation/d/1tRFyvta4QiCx6mgxQzlW7PYf1_ALZSN0fZTedvfK2x4/edit?usp=sharing" target="_blank">
+                    <div class="tile-img-wrapper tile-img5">
+                        <img class="tile-img" src="bait.jpg" alt="EDA-Public Safety">
+                        <div class="project-overlay">
+                            <strong>클릭베이트(Clickbait) 탐지</strong><br>
+                            텍스트의 클릭베이트 여부를 탐지하는 머신러닝 모델. (전통적 머신러닝 및 LLM 활용)
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img6">
+                        <img class="tile-img" src="sf.jpg" alt="Crime">
+                        <div class="project-overlay">
+                            <strong>범죄율 분석</strong><br>
+                            2024년 멕시코 전국 피해자 및 공공 안전 인식 조사(ENVIPE)를 위한 탐색적 데이터 분석.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
         
         
         
 
 
         <section id="section5" style="height: fit-content;">
-            <h2>자격증</h2>
-            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);">아이콘을 클릭하여 설명 보기 </p>
+            <h2>자격증 및 수료증</h2>
+            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> 설명을 보려면 아이콘을 클릭하세요 </p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <img src="engl.png" class="category-icon" alt="British Council Cert Icon">
-                    <h3 class="cssanimation hu__hu__">영국 의회 C1 영어 인증서</h3>
+                    <img src="engl.png" class="category-icon" alt="영국문화원 자격증 아이콘">
+                    <h3 class="cssanimation hu__hu__">영국문화원(British Council) 영어 C1 자격증</h3>
                     <div class="skills-list">
                         <div class="Certificate">
-                            <a href="https://drive.google.com/file/d/1UCylA8LzGqBTAyHj90XFsnE5tslPC5T9/view?usp=sharing" title="View Certificate" target="_blank"><img src="btscl.png" alt="British Council Certificate"></a>
-                            <span>C1 영국 의회 인증서</span>
+                            <a href="https://drive.google.com/file/d/1UCylA8LzGqBTAyHj90XFsnE5tslPC5T9/view?usp=sharing" title="인증서 보기" target="_blank"><img src="btscl.png" alt="British Council Certificate"></a>
+                            <span>영국문화원 C1 인증서</span>
                         </div>
                         
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="hr.png" class="category-icon" alt="Programming Languages Icon">
-                    <h3 class="cssanimation hu__hu__">해커랭크 인증서</h3>
+                    <img src="hr.png" class="category-icon" alt="프로그래밍 언어 아이콘">
+                    <h3 class="cssanimation hu__hu__">HackerRank 인증서</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="View Certificate" target="_blank"><img src="PyB.png" alt="British Council Certificate"></a>
-                                <span>Python HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="인증서 보기" target="_blank"><img src="PyB.png" alt="British Council Certificate"></a>
+                                <span>Python HackerRank 인증서</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="View Certificate" target="_blank"><img src="SQLAd.png" alt="SQL Advanced Certificate"></a>
-                                <span>SQL (Advanced) HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="인증서 보기" target="_blank"><img src="SQLAd.png" alt="SQL Advanced Certificate"></a>
+                                <span>SQL (고급) HackerRank 인증서</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/510858440455" title="View Certificate" target="_blank"><img src="SQLB.png" alt="SQL Basic Certificate"></a>
-                                <span>SQL (Basic) HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/510858440455" title="인증서 보기" target="_blank"><img src="SQLB.png" alt="SQL Basic Certificate"></a>
+                                <span>SQL (기초) HackerRank 인증서</span>
                             </div>
                         </div>
                         
                     </div>
                 </div>
                 <div class="skill-category">
-                    <img src="mcsft.jpg" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">Microsoft Office 전문가 인증서</h3>
+                    <img src="mcsft.jpg" class="category-icon" alt="소프트 스킬 아이콘">
+                    <h3 class="cssanimation hu__hu__">Microsoft Office Specialist(MOS) 자격증</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=251&cvid=eh8e5iM9auXgOr6SSwifrQ%3D%3D" title="View Certificate" target="_blank"><img src="Excel.png" alt="Excel"></a>
-                                <span>Microsoft Excel Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=251&cvid=eh8e5iM9auXgOr6SSwifrQ%3D%3D" title="인증서 보기" target="_blank"><img src="Excel.png" alt="Excel"></a>
+                                <span>Microsoft Excel Specialist 자격증</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=252&cvid=j1dN%2F50uBSHAs54UjgC3zQ%3D%3D" title="View Certificate" target="_blank"><img src="Power.png" alt="PowerPoint"></a>
-                                <span>Microsoft PowerPoint Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=252&cvid=j1dN%2F50uBSHAs54UjgC3zQ%3D%3D" title="인증서 보기" target="_blank"><img src="Power.png" alt="PowerPoint"></a>
+                                <span>Microsoft PowerPoint Specialist 자격증</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=250&cvid=gYCRYrhOJpbRcUyJ75lTGQ%3D%3D" title="View Certificate" target="_blank"><img src="Word.png" alt="Word"></a>
-                                <span>Microsoft Word Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=250&cvid=gYCRYrhOJpbRcUyJ75lTGQ%3D%3D" title="인증서 보기" target="_blank"><img src="Word.png" alt="Word"></a>
+                                <span>Microsoft Word Specialist 자격증</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category" style="margin-top: 50px;">
-                    <img src="cisc.png" class="category-icon" alt="Machine Learning Icon">
-                    <h3 class="cssanimation hu__hu__">Cisco 네트워킹 및 사이버 보안 인증</h3>
+                    <img src="cisc.png" class="category-icon" alt="머신러닝 아이콘">
+                    <h3 class="cssanimation hu__hu__">Cisco 네트워킹 및 사이버 보안 인증서</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="View Certificate" target="_blank"><img src="Intro2IoT.png" alt="IoT"></a>
-                                <span>Introduction to IoT</span>
+                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="인증서 보기" target="_blank"><img src="Intro2IoT.png" alt="IoT"></a>
+                                <span>사물인터넷(IoT) 개론</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="View Certificate" target="_blank"><img src="I2CS__1_.png" alt="Cybersecurity"></a>
-                                <span>Introduction to Cybersecurity</span>
+                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="인증서 보기" target="_blank"><img src="I2CS__1_.png" alt="Cybersecurity"></a>
+                                <span>사이버 보안 개론</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/510858440455" title="View Certificate" target="_blank"><img src="CNNA.png" alt="Scaling Networks: CCNA"></a>
-                                <span>CCNA: Routing & Switching. Scaling Networks</span>
+                                <a href="https://www.hackerrank.com/certificates/510858440455" title="인증서 보기" target="_blank"><img src="CNNA.png" alt="Scaling Networks: CCNA"></a>
+                                <span>CCNA: 라우팅 및 스위칭. 네트워크 확장</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category" style="margin-top: 50px;">
-                    <img src="gg.png" class="category-icon" alt="NLP Icon">
-                    <h3 class="cssanimation hu__hu__">Google 분석 및 마케팅 인증</h3>
+                    <img src="gg.png" class="category-icon" alt="NLP 아이콘">
+                    <h3 class="cssanimation hu__hu__">Google 애널리틱스 및 마케팅 인증서</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1QJNugc01xmRO6ZFNg9Myx4BVX2Ymv9LC/view?usp=sharing" title="View Certificate" target="_blank"><img src="mrkt.png" alt="Marketing"></a>
-                                <span>Digital Marketing Foundations</span>
+                                <a href="https://drive.google.com/file/d/1QJNugc01xmRO6ZFNg9Myx4BVX2Ymv9LC/view?usp=sharing" title="인증서 보기" target="_blank"><img src="mrkt.png" alt="Marketing"></a>
+                                <span>디지털 마케팅 기초</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1mKlux0pz3Sz3PCfcoDtH3J5BZVQsfdfR/view?usp=sharing" title="View Certificate" target="_blank"><img src="gan.png" alt="Analytics"></a>
-                                <span>Google Analytics</span>
+                                <a href="https://drive.google.com/file/d/1mKlux0pz3Sz3PCfcoDtH3J5BZVQsfdfR/view?usp=sharing" title="인증서 보기" target="_blank"><img src="gan.png" alt="Analytics"></a>
+                                <span>Google 애널리틱스</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1vDUGX0AQshCJEIj6objUbHMzCfPpjBdo/view?usp=sharing" title="View Certificate" target="_blank"><img src="cyber.png" alt="Cybersecurity"></a>
-                                <span>Cibersecurity on remote work</span>
+                                <a href="https://drive.google.com/file/d/1vDUGX0AQshCJEIj6objUbHMzCfPpjBdo/view?usp=sharing" title="인증서 보기" target="_blank"><img src="cyber.png" alt="Cybersecurity"></a>
+                                <span>원격 근무 사이버 보안</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="skill-category" style="margin-top: 50px;">
-                    <img src="gl.png" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">기타 인증</h3>
+                    <img src="logo-ibm.png" class="category-icon" alt="소프트 스킬 아이콘">
+                    <h3 class="cssanimation hu__hu__">IBM 인증서</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1QB7mE3sVGi8b8lsuNNnpjIzUp2WQ5OZF/view?usp=sharing" title="View Certificate" target="_blank"><img src="Cripto.png" alt="Cryptocurrencies"></a>
-                                <span>Training in Cryptocurrencies & Blockchain</span>
+                                <a href="https://www.credly.com/badges/97f54ba1-19e2-46ed-bb9b-9000aaa08738/" title="인증서 보기" target="_blank"><img src="dsmloops.png" alt="DS & MLOps"></a>
+                                <span>watsonx.ai 데이터 사이언스 및 MLOps 영업 기초</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/41e6cf57-3eeb-46a5-a42c-c24fcb307cfc/" title="인증서 보기" target="_blank"><img src="genmod.png" alt="AI Models"></a>
+                                <span>watsonx.ai 생성형 AI 모델 영업 기초</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/e2fb7965-c8f0-4ca8-8ae0-dc90a22517f9/" title="인증서 보기" target="_blank"><img src="dtp.png" alt="Design Thinking"></a>
+                                <span>엔터프라이즈 디자인 싱킹 프랙티셔너(Practitioner)</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/545e21e6-7162-4877-b568-5affd679318d/" title="인증서 보기" target="_blank"><img src="data.png" alt="Data"></a>
+                                <span>watsonx.ai 데이터 준비 영업 기초</span>
                             </div>
                            
                         </div>
@@ -499,31 +597,31 @@ rel="stylesheet">
 
 
         <section id="section6">
-            <h2>과외 활동</h2>
+            <h2>대외활동</h2>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
-              <em>"잘 있어. 내 비밀을 말할게. 아주 간단한 거야:</em>
+              <em>“내 비밀은 이거야. 아주 간단해. 오직 마음으로</em>
             </p>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-              <em>마음으로 보아야 잘 보인다는 거야.</em>
+              <em>보아야 잘 보인다는 거야. 가장 중요한 것은</em>
             </p>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-              <em>가장 중요한 것은 눈에 보이지 않아."– 앙투안 드 생텍쥐페리, 어린 왕자</em>
+              <em>눈에 보이지 않아.” – 앙투안 드 생텍쥐페리, 어린 왕자</em>
             </p>
             <br><br>
             <ul>
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459231431" target="_blank">
                   <figure>
-                    <img src='congreso.jpeg' alt='Volcano and lava field against a stormy sky'>
-                    <figcaption>컴퓨터 과학 회의 <br>2023-A</figcaption>
+                    <img src='congreso.jpeg' alt='폭풍우 치는 하늘 아래 화산과 용암 지대' draggable="false" oncontextmenu="return false;">
+                    <figcaption>컴퓨터 과학 학술대회 <br>2023-A</figcaption>
                   </figure>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459703976" target="_blank">
                   <figure>
-                    <img src='expo.jpeg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                    <figcaption>EXPO ESCOM 2024</figcaption>
+                    <img src='expo.jpeg' alt='숲을 배경으로 나무 다리 위에서 자전거를 타는 남자' draggable="false" oncontextmenu="return false;">
+                    <figcaption>2024 ESCOM 엑스포</figcaption>
                   </figure>
                 </a>
               </li>
@@ -531,8 +629,8 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/5as2U_wV7h8" target="_blank">
                     <figure>
                         <figure>
-                            <img src='fil.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>FIL GUADALAJARA <br>(세계에서 두 번째로 <br>중요한 국제 도서전)</figcaption>
+                            <img src='fil.png' alt='숲을 배경으로 나무 다리 위에서 자전거를 타는 남자' draggable="false" oncontextmenu="return false;">
+                            <figcaption>과달라하라 국제 도서전 (FIL) <br>(세계에서 두 번째로 큰 규모의 <br>국제 도서전)</figcaption>
                           </figure>
                 </a>
               </li>
@@ -540,8 +638,8 @@ rel="stylesheet">
                 <a href="https://www.instagram.com/thekoooi/" target="_blank">
                     <figure>
                         <figure>
-                            <img src='thk.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>@thekooi <br>십자 자수</figcaption>
+                            <img src='thk.png' alt='숲을 배경으로 나무 다리 위에서 자전거를 타는 남자' draggable="false" oncontextmenu="return false;">
+                            <figcaption>@thekooi <br>십자수 자수 공예</figcaption>
                           </figure>
                 </a>
               </li>
@@ -549,17 +647,17 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/mC68LRQSlW0" target="_blank">
                     <figure>
                         <figure>
-                            <img src='dvd.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>예술과 경험</figcaption>
+                            <img src='dvd.jpg' alt='숲을 배경으로 나무 다리 위에서 자전거를 타는 남자' draggable="false" oncontextmenu="return false;">
+                            <figcaption>예술 및 다양한 경험</figcaption>
                           </figure>
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/shorts/4hjBUcG-Uqk" target="_blank">
+                <a href="https://www.youtube.com/shorts/b8XrUSa-OnA" target="_blank">
                     <figure>
                         <figure>
-                            <img src='kr.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>한국어 <br> 학습</figcaption>
+                            <img src='kr.jpg' alt='숲을 배경으로 나무 다리 위에서 자전거를 타는 남자' draggable="false" oncontextmenu="return false;">
+                            <figcaption>한국어 <br>어학 공부</figcaption>
                           </figure>
                 </a>
               </li>
@@ -567,16 +665,16 @@ rel="stylesheet">
 
             <div id="goodbye">
                 <p style="font-family: 'Cormorant Garamond', serif; font-weight: 420; text-align: center; font-size: 1.5rem; margin-top: 40px;">
-                    하트를 남기면 책을 추천해 드리겠습니다 :)
+                    하트를 남겨주시면 책을 추천해 드릴게요 :)
                 </p>
                 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
                     <button id="likeButton" style="background: none; border: none; cursor: pointer;">
-                        <img src="heart.png" alt="Heart" width="150" height="150">
+                        <img src="heart.png" alt="하트" width="150" height="150">
                     </button>
                     <span id="likeCount" style="font-size: 2rem;">0</span>
                 </div>
                 <p id="bookRecommendation" style="text-align: center; font-style: italic; margin-top: 10px;"></p>
-                <img id="bookCover" src="" alt="Book cover" style="display: none; width: 300px; height: 100%; margin-top: 10px; justify-self: center;">
+                <img id="bookCover" src="" alt="책 표지" style="display: none; width: 300px; height: 100%; margin-top: 10px; justify-self: center;">
             </div>
             
 
@@ -586,7 +684,7 @@ rel="stylesheet">
 
 
     <footer>
-        <p> <i class="corm-gar-reg-foot"> Made with ♡ from scratch, by  &copy;2025 Karla Esther Escamilla Gachuz. All rights reserved. <i></p>
+        <p> <i class="corm-gar-reg-foot"> 처음부터 ♡를 담아 제작함,  &copy;2025 칼라 에스테르 에스카미야 가추스. 모든 권리 보유. <i></p>
     </footer>
 
     <script src="ProfesionalProf.js"></script>
@@ -595,4 +693,3 @@ rel="stylesheet">
 
 </body>
 </html>
-
