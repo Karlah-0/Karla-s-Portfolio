@@ -1,81 +1,5 @@
-const languageContent = {
-    es: {
-        menu: {
-            home: "Inicio",
-            skills: "Herramientas",
-            experience: "Experiencia",
-            projects: "Proyectos",
-            certifications: "Certificaciones",
-            extracurricular: "Extracurricular"
-        },
-        section1: { title: "Karla Esther Escamilla Gachuz", content: "Contenido de la sección 1." },
-        section2: { title: "Herramientas", content: "Contenido de la sección 2." },
-        section3: { title: "Experiencia", content: "Contenido de la sección 3." },
-        section4: { title: "Proyectos", content: "Contenido de la sección 4." },
-        section5: { title: "Certificaciones", content: "Contenido de la sección 5." },
-        section6: { title: "Extracurricular", content: "Contenido de la sección 6." }
-    },
-    en: {
-        menu: {
-            home: "Home",
-            skills: "Skills",
-            experience: "Experience",
-            projects: "Projects",
-            certifications: "Certifications",
-            extracurricular: "Extracurricular"
-        },
-        section1: { title: "Karla Esther Escamilla Gachuz", content: "Content of section 1." },
-        section2: { title: "Skills", content: "Content of section 2." },
-        section3: { title: "Experience", content: "Content of section 3." },
-        section4: { title: "Projects", content: "Content of section 4." },
-        section5: { title: "Certifications", content: "Content of section 5." },
-        section6: { title: "Extracurricular", content: "Content of section 6." }
-    },
-    ko: {
-        menu: {
-            home: "홈",
-            skills: "기술",
-            experience: "경험",
-            projects: "프로젝트",
-            certifications: "인증",
-            extracurricular: "과외활동"
-        },
-        section1: { title: "카를라 에스더 에스카밀라 가추스", content: "섹션 1의 내용." },
-        section2: { title: "기술", content: "섹션 2의 내용." },
-        section3: { title: "경험", content: "섹션 3의 내용." },
-        section4: { title: "프로젝트", content: "섹션 4의 내용." },
-        section5: { title: "인증", content: "섹션 5의 내용." },
-        section6: { title: "과외활동", content: "섹션 6의 내용." }
-    }
-};
 
-document.querySelectorAll('#language-switcher button').forEach(button => {
-    button.addEventListener('click', function() {
-        const selectedLang = this.getAttribute('data-lang');
-        updateContent(selectedLang);
-    });
-});
 
-function updateContent(lang) {
-    for (let i = 1; i <= 6; i++) {
-        const section = document.querySelector(`#section${i}`);
-        const title = section.querySelector('h2');
-        const content = section.querySelector('p');
-
-        title.textContent = languageContent[lang][`section${i}`].title;
-        content.textContent = languageContent[lang][`section${i}`].content;
-
-        // Aquí se conservan las clases CSS
-        title.className = title.className;
-        content.className = content.className;
-    }
-    document.querySelector('nav ul li a[href="#section1"]').textContent = languageContent[lang].menu.home;
-    document.querySelector('nav ul li a[href="#section2"]').textContent = languageContent[lang].menu.skills;
-    document.querySelector('nav ul li a[href="#section3"]').textContent = languageContent[lang].menu.experience;
-    document.querySelector('nav ul li a[href="#section4"]').textContent = languageContent[lang].menu.projects;
-    document.querySelector('nav ul li a[href="#section5"]').textContent = languageContent[lang].menu.certifications;
-    document.querySelector('nav ul li a[href="#section6"]').textContent = languageContent[lang].menu.extracurricular;
-}
 
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -86,7 +10,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-
+feather.replace();
 const palabras = [
     "Python", "SQL", "C++", "R", "AI", "Machine Learning", "Natural Language Processing", "Large Language Models", "Data Modeling",
     "Big Data", "Dashboards", "Generative AI", "Chatbots", "Web Developing"
@@ -334,7 +258,20 @@ document.addEventListener("DOMContentLoaded", function () {
         { title: "Fangs - Sarah Andersen", cover: "covers/fng.jpg" },
         { title: "The Wrath & The Down - Renee Ahdieh", cover: "covers/twd.jpg" },
         { title: "The Water Trench - Lydiette Carrión", cover: "covers/fda.png" },
-        { title: "Nothing - Janne Teller", cover: "covers/nd.jpg" }
+        { title: "Nothing - Janne Teller", cover: "covers/nd.jpg" },
+        { title: "Wild Swans - Jung Chang", cover: "covers/wld.jpg" },
+        { title: "The Poppy War - R.F. Kuang", cover: "covers/ppy.jpg" },
+        { title: "The Nightingale - Kristin Hannah", cover: "covers/nght.jpg" },
+        { title: "My Dark Vanessa - Kate Elizabeth Russel", cover: "covers/dkv.jpg" },
+        { title: "The Art of War - Sun Tzu", cover: "covers/wr.jpg" },
+        { title: "To Live - Hua Yu", cover: "covers/tlv.jpg" },
+        { title: "The Three Body Problem - Cixin Liu", cover: "covers/bd.jpg" },
+        { title: "The Wedding People - Alison Espach", cover: "covers/twp.jpg" },
+        { title: "The Island of Sea Women - Lisa See", cover: "covers/sw.jpg" },
+        { title: "Winter in Sokcho - Elisa Shua Dusapin", cover: "covers/skc.jpg" },
+        { title: "Thinking, fast and slow - Daniel Kahneman", cover: "covers/fns.jpg" },
+        { title: "Find Your Vitamin Person - Marian Rojas Estapé", cover: "covers/vt.jpg" },
+        { title: "The Boy, the Mole, the Fox and the Horse - Charlie Mackesy", cover: "covers/bml.jpg" }
     ];
 
 // Función para mezclar la lista de libros
