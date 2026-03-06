@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karla's Portfolio</title>
+    <title>Portafolio de Karla</title>
     <link rel="icon" type="image/x-icon" href="kf.png">
     <link rel="stylesheet" href="ProfesionalProf.css">
     <link
@@ -21,48 +21,57 @@ rel="stylesheet">
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 
 <body id="home">
 
     <div id="contact">
-        <a href="#home" title="Home"><img src="lg.png" alt="Logo" style="width: 80px; margin-left: 20px; margin-top: 20%;"></a>
+        <a href="#home" title="Inicio"><img src="lg.png" alt="Logo" style="width: 80px; margin-left: 20px; margin-top: 20%;"></a>
     
         <button id="contact-button" >
-        <img src="p.png" alt="Phone" style="width: 40px;" class="icon">
+        <img src="p.png" alt="Teléfono" style="width: 40px;" class="icon">
         <p style="font-family:'Cormorant Garamond', serif; margin: 5px 0 0 0;">c o n t a c t o</p>
     </button>
     <div id="contact-icons" style="display: none;">
         <a href="mailto:karlah.escamilla22@gmail.com" title="Enviar correo"><img src="m.png" alt="Email" class="icon"></a>
-        <a href="https://www.linkedin.com/in/karlaescamillag/" title="Revisar LinkedIn" target="_blank"><img src="in.png" alt="LinkedIn" class="icon"></a>
-        <a href="https://github.com/Karlah-0" title="Revisar Github" target="_blank"><img src="gt.png" alt="GitHub" class="icon"></a>
-        <a href="https://www.goodreads.com/mouklair" target="_blank" title="Revisar Goodreads"><img src="gr.png" alt="Goodreads" class="icon"></a>
-        <a href="https://drive.google.com/file/d/1XgmMQcSw8I9kDR0bRM5GCmzSp86vg_ye/view?usp=sharing" title="Revisar CV" target="_blank"><img src="cv.png" alt="CV" class="icon"></a>
+        <a href="https://www.linkedin.com/in/karlaescamillag/" title="Ver LinkedIn" target="_blank"><img src="in.png" alt="LinkedIn" class="icon"></a>
+        <a href="https://github.com/Karlah-0" title="Ver GitHub" target="_blank"><img src="gt.png" alt="GitHub" class="icon"></a>
+        <a href="https://www.goodreads.com/mouklair" target="_blank" title="Ver Goodreads"><img src="gr.png" alt="Goodreads" class="icon"></a>
+        <a href="https://drive.google.com/file/d/1XgmMQcSw8I9kDR0bRM5GCmzSp86vg_ye/view?usp=sharing" title="Ver CV" target="_blank"><img src="cv.png" alt="CV" class="icon"></a>
     </div>
 
     </div>
     <header>
-        <nav id="menu">
-            <ul class="dots">
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-            </ul>
-            <ul class="menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#section2" class="nav-link">Habilidades</a></li>
-                <li><a href="#section3" class="nav-link">Experiencia</a></li>
-                <li><a href="#section4" class="nav-link">Proyectos</a></li>
-                <li><a href="#section5" class="nav-link">Certificaciones</a></li>
-                <li><a href="#section6" class="nav-link">Extracurricular</a></li>
-            </ul>
-        </nav>
-        <div id="language-switcher">
-            <a href="ProfesionalProf_Esp.html"><button data-lang="es">ES</button></a>
-            <a href="index.html"><button data-lang="en">EN</button></a>
-            <a href="ProfesionalProf_Kor.html"><button data-lang="ko">KO</button></a>
-        </div>
+        <nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="#section1" class="navbar__link"><i data-feather="home"></i><span>Inicio</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section2" class="navbar__link"><i data-feather="star"></i><span>Habilidades</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section3" class="navbar__link"><i data-feather="briefcase"></i><span>Experiencia</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section4" class="navbar__link"><i data-feather="folder"></i><span>Proyectos</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section5" class="navbar__link"><i data-feather="award"></i><span>Certificados</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section6" class="navbar__link"><i data-feather="activity"></i><span>Extra</span></a>        
+    </li>
+  </ul>
+
+  <div class="navbar__langs">
+    <a href="#" class="lang-btn active">ES</a>
+    <a href="ProfesionalProf_Eng.html" class="lang-btn">EN</a>
+    <a href="ProfesionalProf_Kor.html" class="lang-btn">KO</a>
+  </div>
+</nav>
     </header>
 
 
@@ -76,29 +85,30 @@ rel="stylesheet">
             <h2 class="animate__animated animate__fadeInDown"><div class="name">Karla Esther <br>Escamilla Gachuz</div></h2>
             
             <button id="more-details-btn">
-                <img src="pl.png" alt="More details">
+                <img src="pl.png" alt="Más detalles">
             </button>
             
             <div id="overlay">
                 <div id="modal">
                     <span id="close-btn">&times;</span>
                     <img src="lg.png" alt="Logo" style="width: 80px; margin-left: 20px; margin-top: 10px;">
-                    <h3>Sobre mí </h3>
+                    <h3>Sobre mí</h3>
                     <p>
-                        Como los peces koi que nadan contra las adversidades, abrazo el crecimiento y la transformación, convirtiendo los obstáculos en nuevas oportunidades.
+                        Como el pez koi que nada a través de las adversidades, abrazo el crecimiento y la transformación, convirtiendo los obstáculos en nuevas oportunidades.
                     </p>
                     <br>
                     <p>
-                        Soy una profesional de datos con una sólida formación en Machine Learning, NLP y Big Data, con habilidades en Python, SQL, Tableau y MongoDB. Apasionada por convertir la complejidad en claridad, soy graduada del Programa de Excelencia Plantel Fundación Azteca y actualmente estudio Ciencia de Datos en ESCOM IPN.                    </p>
+                        Soy una profesional de datos con una sólida formación en Machine Learning, NLP y Big Data, con habilidades en Python, SQL, Tableau y MongoDB. Me apasiona transformar la complejidad en claridad; soy graduada del Programa de Excelencia de Plantel Fundación Azteca y actualmente estudio Ciencia de Datos en la ESCOM del IPN.
+                    </p>
                     <br>
                     <p>
-                        Entre novelas, matcha, la cultura coreana y los viajes inspirados en la ficción literaria, exploro historias que expanden mi mundo tanto como lo hacen los datos.
+                        Entre novelas, matcha, la cultura coreana y viajes inspirados en la ficción literaria, exploro historias que expanden mi mundo tanto como lo hacen los datos.
                     </p>
                 </div>
             </div>
             
             <p class="space-mono-regular"><p class="typing-demo">Creativa, perspicaz y aventurera,</p></p>
-            <p class="space-mono-regular"><p class="typing-demo2" style="margin-top: -70px;">B.S. Data Scientist transformando complejidad en claridad.</p></p>
+            <p class="space-mono-regular"><p class="typing-demo2" style="margin-top: -70px;">Científica de Datos transformando la complejidad en claridad.</p></p>
         <div class="content-wrapper2">
         <div class="carrusel-container">
             <span id="carrusel-texto" class="leBlurInBottom"></span>
@@ -110,7 +120,7 @@ rel="stylesheet">
 
         <section id="section2" style="height: fit-content;">
             <h2>Habilidades</h2>
-            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> Haz click en el ícono para ver las habilidades</p>
+            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> Haz clic en el ícono para ver las habilidades </p>
             <div class="skills-grid">
                 <div class="skill-category">
                     <img src="lgg.png" class="category-icon" alt="Languages Icon">
@@ -175,7 +185,7 @@ rel="stylesheet">
                 </div>
                 <div class="skill-category">
                     <img src="sft.png" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">Softskills</h3>
+                    <h3 class="cssanimation hu__hu__">Habilidades Blandas</h3>
                     <div class="skills-list softskills-grid">
                         <div class="softskill">
                             <img src="cm.png" alt="Communication Icon">
@@ -244,7 +254,7 @@ rel="stylesheet">
                 </div>
                 <div class="skill-category">
                     <img src="tls.png" class="category-icon" alt="Technologies Icon">
-                    <h3 class="cssanimation hu__hu__">Herramientas de Datos & +Tecnologías</h3>
+                    <h3 class="cssanimation hu__hu__">Herramientas de Datos y +Tecnologías</h3>
                     <div class="skills-list technologies-grid">
                         <div class="skill" id="pill-skil">
                             <img src="sql.png" alt="SQL Logo">
@@ -291,16 +301,14 @@ rel="stylesheet">
         
         <section id="section3">
             <h2>Experiencia</h2>
-            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal;"><em>“El conocimiento es experiencia. Todo lo demás es sólo información.”  – Albert Einstein </em></p>
+            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal;"><em>“El conocimiento es experiencia. Todo lo demás es solo información.”  – Albert Einstein </em></p>
            
             <div class="background-animation">
                 <div class="drop"></div>
                 <div class="wave"></div>
             </div>
 
-            <div class="dscycle">
-                <img src="dscycle.png">
-            </div>
+           
             <div class="counter-container-L">
                 <div id="academic-counter" class="counter">
                     <h3>Días Académicos</h3>
@@ -309,9 +317,7 @@ rel="stylesheet">
                 </div>
             </div>
 
-            <div class="dacycle">
-                <img src="dacycle.png">
-            </div>
+            
             <div class="counter-container">
                 <div id="professional-counter" class="counter">
                     <h3>Días de Trabajo Profesional</h3>
@@ -319,64 +325,145 @@ rel="stylesheet">
                     <p id="professional-equivalent"></p>
                 </div>
             </div>
+
+            <div class="fun-gallery-container">
+            <div class="gallery-item">
+                <img src="jst.png" alt="TOJIL" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">Analista de Datos en TOJIL <br>Modelado de incidencia delictiva y automatización al 100% 🚓</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="cic.jpeg" alt="CIC" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">Asistente de Investigación en el Lab de NLP del CIC IPN 🤖</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="me_ibm.jpeg" alt="IBM" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">Pasante de Ventas Técnicas Globales en IBM 🌍</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="ibm.jpeg" alt="DATA" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">Promovida a Data & AI Sales Student en IBM ✨</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="qtm.jpeg" alt="Quant" draggable="false" oncontextmenu="return false;">
+                <div class="gallery-phrase">Exalumna de Computación Cuántica con el Dr. Sun Guohua 🖳</div>
+            </div>
+        </div>
+
+
+
             <div class="logos">
                 <img src="logo_ipn.png">
                 <img src="logo_es.png">
                 <img src="logo-pl.png">
+                <img src="ibm.png">
                 <img src="logo_msf.png">
                 <img src="logo_csc.png">
-                <img src="logo-tj.png">
+                <img src="logo_tj.png">
             </div>
         </section>
         
 
 
         <section id="section4">
-            <h2>Proyectos</h2>
-            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
-                <em>“El momento en que dudas si puedes volar, </em></p>
-                <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-                <em>dejas para siempre de poder hacerlo” – Peter Pan por J.M. Barrie</em>
-            </p>
-            
-            <div class="gallery">
-                <input type="checkbox" id="gallery-toggle">
-                <label for="gallery-toggle" class="gallery-button">+</label>
-                <div class="gallery-items">
-                    <div class="project">
-                        <img src="investment.jpg" alt="MIA CETSDIRECTO" style="--i:1">
-                        <div class="description">CETESDIRECTO® Herramienta de apoyo a inversionistas: Modelado del comportamiento de la inflación y su impacto en las decisiones financieras (Python, Regresión, Machine Learning).</div>
+    <h2>Proyectos</h2>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
+        <em>“En el momento en que dudas si puedes volar, </em></p>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
+        <em>dejas para siempre de poder hacerlo” – Peter Pan por J.M. Barrie</em>
+    </p>
+
+    <div class="grid image-grid">
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1gZsUCALPb0q2ArJP2OmHjlhNp1UNgz-e?usp=sharing">
+                    <div class="tile-img-wrapper tile-img1">
+                        <img class="tile-img" src="ai.jpg" alt="ATR-TTS">
+                        <div class="project-overlay">
+                            <strong>Sintetizador de Voz Multilingüe (ATR-TTS)</strong><br>
+                            Reconocimiento de voz, traducción automática y síntesis de voz (Whisper, NLLB, Bark y Python)
+                        </div>
                     </div>
-                    <div class="project">
-                        <img src="amazon.jpg" alt="SAVE-A" style="--i:2">
-                        <div class="description">Aplicación web amigable de comparación de productos con Python y métodos de Ciencia de Datos, toma la mejor decisión de compra (Python, Web Scrapping, EDA).</div>
-                    </div>
-                    <div class="project">
-                        <img src="library.jpg" alt="Bookry" style="--i:3">
-                        <div class="description">Librería electrónica usando tecnologías MERN (MongoDB, Express, React, Node.js) con un diseño de base de datos optimizada para garantizar escalabilidad y seguridad. Presentado en Expo ESCOM 2024, obteniendo el 3er lugar.</div>
-                    </div>
-                    <div class="project">
-                        <img src="gming.jpg" alt="PinkPacman" style="--i:4">
-                        <div class="description">Simulación del juego de pacman con laberintos rosas usando estructuras y funciones de C.</div>
-                    </div>
-                    <div class="project">
-                        <img src="pcar.jpg" alt="EDA-Public Safety" style="--i:5">
-                        <div class="description">Análisis Exploratorio de Datos para la Encuesta Nacional de Victimización y Percepción de Seguridad Pública (ENVIPE) 2024.</div>
-                    </div>
-                    <div class="project">
-                        <img src="medical.jpg" alt="Diabetes Model" style="--i:6">
-                        <div class="description">Modelo de Predicción del Diagnóstico de Diabetes con Indicadores de Salud de Diabetes del CDC (Centers for Disease Control and Prevention).</div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="demos">
-                <p style="margin-top: -.5px;">Demos</p>
-                <a href="https://github.com/Karlah-0/paper-similarity" title="NLP: Document Similairty" target="_blank"><img src="keyb.jpg" alt="Similarity"></a>
-                <a href="https://github.com/Karlah-0/SAVE-A/blob/main/SAVE-A/SAVE-A.ipynb" title="SAVE-A" target="_blank"><img src="amzn.jpg" alt="SAVE-A"></a>
-                <a href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" title="Perception of Public Safety" target="_blank"><img src="seg.jpg" alt="ENVIPE EDA"></a>
-                <a href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb" title="Diabetes Diagnosis Prediction" target="_blank"><img src="diabetes.jpg" alt="Predicción de Diabetes"></a>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Credit-Card-Fraud-Detection/blob/main/collect/Credit_Card_Fraud_Detection_Data_Science.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img2">
+                        <img class="tile-img" src="cards.jpg" alt="Credit">
+                        <div class="project-overlay">
+                            <strong>Detección de Fraude en Tarjetas de Crédito</strong><br>
+                            Análisis Exploratorio de Datos (EDA), modelado predictivo de fraude y análisis de un conjunto de datos falso de tarjetas de crédito.
+                        </div>
+                    </div>
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb">
+                    <div class="tile-img-wrapper tile-img3">
+                        <img class="tile-img" src="diab.jpg" alt="Diabetes">
+                        <div class="project-overlay">
+                            <strong>Predicción de Diagnóstico de Diabetes</strong><br>
+                            Modelo de predicción con indicadores de salud sobre diabetes de los CDC (Centros para el Control y la Prevención de Enfermedades).
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1nP87hcrevlORvgSKpnq5O0cksqwAh-bK?usp=sharing">
+                    <div class="tile-img-wrapper tile-img4">
+                        <img class="tile-img" src="senty.jpg" alt="Sentiment Polarity">
+                        <div class="project-overlay">
+                            <strong>Polaridad de Sentimientos (NLP)</strong><br>
+                            Análisis de sentimientos de reseñas de cine basado en clasificación (pruebas con XGBOOST, K-Means, Random Forest y SVM).
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://docs.google.com/presentation/d/1tRFyvta4QiCx6mgxQzlW7PYf1_ALZSN0fZTedvfK2x4/edit?usp=sharing" target="_blank">
+                    <div class="tile-img-wrapper tile-img5">
+                        <img class="tile-img" src="bait.jpg" alt="EDA-Public Safety">
+                        <div class="project-overlay">
+                            <strong>Detección de Clickbait</strong><br>
+                            Modelo de machine learning para detectar si un texto es clickbait o no. (ML Tradicional y LLMs)
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img6">
+                        <img class="tile-img" src="sf.jpg" alt="Crime">
+                        <div class="project-overlay">
+                            <strong>Incidencia Delictiva</strong><br>
+                            Análisis Exploratorio de Datos de la Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE) 2024.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
         
         
         
@@ -384,35 +471,35 @@ rel="stylesheet">
 
         <section id="section5" style="height: fit-content;">
             <h2>Certificaciones</h2>
-            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> Haz click en el ícono para ver la descripción </p>
+            <p style=" font-family: 'Space Mono', serif; font-weight: 400; color: rgb(92, 92, 92);"> Haz clic en el ícono para ver una descripción </p>
             <div class="skills-grid">
                 <div class="skill-category">
                     <img src="engl.png" class="category-icon" alt="British Council Cert Icon">
-                    <h3 class="cssanimation hu__hu__">British Council C1 English Certificate</h3>
+                    <h3 class="cssanimation hu__hu__">Certificado de Inglés C1 del British Council</h3>
                     <div class="skills-list">
                         <div class="Certificate">
-                            <a href="https://drive.google.com/file/d/1UCylA8LzGqBTAyHj90XFsnE5tslPC5T9/view?usp=sharing" title="View Certificate" target="_blank"><img src="btscl.png" alt="British Council Certificate"></a>
-                            <span>C1 British Council Certificate</span>
+                            <a href="https://drive.google.com/file/d/1UCylA8LzGqBTAyHj90XFsnE5tslPC5T9/view?usp=sharing" title="Ver Certificado" target="_blank"><img src="btscl.png" alt="British Council Certificate"></a>
+                            <span>Certificado C1 del British Council</span>
                         </div>
                         
                     </div>
                 </div>
                 <div class="skill-category">
                     <img src="hr.png" class="category-icon" alt="Programming Languages Icon">
-                    <h3 class="cssanimation hu__hu__">HackerRank Certificates</h3>
+                    <h3 class="cssanimation hu__hu__">Certificados de HackerRank</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="View Certificate" target="_blank"><img src="PyB.png" alt="British Council Certificate"></a>
-                                <span>Python HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="Ver Certificado" target="_blank"><img src="PyB.png" alt="British Council Certificate"></a>
+                                <span>Certificado de Python de HackerRank</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="View Certificate" target="_blank"><img src="SQLAd.png" alt="SQL Advanced Certificate"></a>
-                                <span>SQL (Advanced) HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="Ver Certificado" target="_blank"><img src="SQLAd.png" alt="SQL Advanced Certificate"></a>
+                                <span>Certificado de SQL (Avanzado) de HackerRank</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/510858440455" title="View Certificate" target="_blank"><img src="SQLB.png" alt="SQL Basic Certificate"></a>
-                                <span>SQL (Basic) HackerRank Certificate</span>
+                                <a href="https://www.hackerrank.com/certificates/510858440455" title="Ver Certificado" target="_blank"><img src="SQLB.png" alt="SQL Basic Certificate"></a>
+                                <span>Certificado de SQL (Básico) de HackerRank</span>
                             </div>
                         </div>
                         
@@ -420,73 +507,85 @@ rel="stylesheet">
                 </div>
                 <div class="skill-category">
                     <img src="mcsft.jpg" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">Microsoft Office Specialist Certificates</h3>
+                    <h3 class="cssanimation hu__hu__">Certificados de Microsoft Office Specialist</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=251&cvid=eh8e5iM9auXgOr6SSwifrQ%3D%3D" title="View Certificate" target="_blank"><img src="Excel.png" alt="Excel"></a>
-                                <span>Microsoft Excel Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=251&cvid=eh8e5iM9auXgOr6SSwifrQ%3D%3D" title="Ver Certificado" target="_blank"><img src="Excel.png" alt="Excel"></a>
+                                <span>Certificado de Especialista en Microsoft Excel</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=252&cvid=j1dN%2F50uBSHAs54UjgC3zQ%3D%3D" title="View Certificate" target="_blank"><img src="Power.png" alt="PowerPoint"></a>
-                                <span>Microsoft PowerPoint Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=252&cvid=j1dN%2F50uBSHAs54UjgC3zQ%3D%3D" title="Ver Certificado" target="_blank"><img src="Power.png" alt="PowerPoint"></a>
+                                <span>Certificado de Especialista en Microsoft PowerPoint</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=250&cvid=gYCRYrhOJpbRcUyJ75lTGQ%3D%3D" title="View Certificate" target="_blank"><img src="Word.png" alt="Word"></a>
-                                <span>Microsoft Word Specialist Certificate</span>
+                                <a href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=250&cvid=gYCRYrhOJpbRcUyJ75lTGQ%3D%3D" title="Ver Certificado" target="_blank"><img src="Word.png" alt="Word"></a>
+                                <span>Certificado de Especialista en Microsoft Word</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category" style="margin-top: 50px;">
                     <img src="cisc.png" class="category-icon" alt="Machine Learning Icon">
-                    <h3 class="cssanimation hu__hu__">Cisco Networking & Cybersecurity Certifications</h3>
+                    <h3 class="cssanimation hu__hu__">Certificaciones de Cisco en Redes y Ciberseguridad</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="View Certificate" target="_blank"><img src="Intro2IoT.png" alt="IoT"></a>
-                                <span>Introduction to IoT</span>
+                                <a href="https://www.hackerrank.com/certificates/dd36a4987db6" title="Ver Certificado" target="_blank"><img src="Intro2IoT.png" alt="IoT"></a>
+                                <span>Introducción a IoT</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="View Certificate" target="_blank"><img src="I2CS__1_.png" alt="Cybersecurity"></a>
-                                <span>Introduction to Cybersecurity</span>
+                                <a href="https://www.hackerrank.com/certificates/b056ef3917c5" title="Ver Certificado" target="_blank"><img src="I2CS__1_.png" alt="Cybersecurity"></a>
+                                <span>Introducción a la Ciberseguridad</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://www.hackerrank.com/certificates/510858440455" title="View Certificate" target="_blank"><img src="CNNA.png" alt="Scaling Networks: CCNA"></a>
-                                <span>CCNA: Routing & Switching. Scaling Networks</span>
+                                <a href="https://www.hackerrank.com/certificates/510858440455" title="Ver Certificado" target="_blank"><img src="CNNA.png" alt="Scaling Networks: CCNA"></a>
+                                <span>CCNA: Routing & Switching. Escalamiento de Redes</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category" style="margin-top: 50px;">
                     <img src="gg.png" class="category-icon" alt="NLP Icon">
-                    <h3 class="cssanimation hu__hu__">Google Analytics & Marketing Certifications</h3>
+                    <h3 class="cssanimation hu__hu__">Certificaciones de Google Analytics y Marketing</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1QJNugc01xmRO6ZFNg9Myx4BVX2Ymv9LC/view?usp=sharing" title="View Certificate" target="_blank"><img src="mrkt.png" alt="Marketing"></a>
-                                <span>Digital Marketing Foundations</span>
+                                <a href="https://drive.google.com/file/d/1QJNugc01xmRO6ZFNg9Myx4BVX2Ymv9LC/view?usp=sharing" title="Ver Certificado" target="_blank"><img src="mrkt.png" alt="Marketing"></a>
+                                <span>Fundamentos de Marketing Digital</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1mKlux0pz3Sz3PCfcoDtH3J5BZVQsfdfR/view?usp=sharing" title="View Certificate" target="_blank"><img src="gan.png" alt="Analytics"></a>
+                                <a href="https://drive.google.com/file/d/1mKlux0pz3Sz3PCfcoDtH3J5BZVQsfdfR/view?usp=sharing" title="Ver Certificado" target="_blank"><img src="gan.png" alt="Analytics"></a>
                                 <span>Google Analytics</span>
                             </div>
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1vDUGX0AQshCJEIj6objUbHMzCfPpjBdo/view?usp=sharing" title="View Certificate" target="_blank"><img src="cyber.png" alt="Cybersecurity"></a>
-                                <span>Cibersecurity on remote work</span>
+                                <a href="https://drive.google.com/file/d/1vDUGX0AQshCJEIj6objUbHMzCfPpjBdo/view?usp=sharing" title="Ver Certificado" target="_blank"><img src="cyber.png" alt="Cybersecurity"></a>
+                                <span>Ciberseguridad en el trabajo remoto</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="skill-category" style="margin-top: 50px;">
-                    <img src="gl.png" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">Other Certifications</h3>
+                    <img src="logo-ibm.png" class="category-icon" alt="Softskills Icon">
+                    <h3 class="cssanimation hu__hu__">Certificaciones de IBM</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1QB7mE3sVGi8b8lsuNNnpjIzUp2WQ5OZF/view?usp=sharing" title="View Certificate" target="_blank"><img src="Cripto.png" alt="Cryptocurrencies"></a>
-                                <span>Training in Cryptocurrencies & Blockchain</span>
+                                <a href="https://www.credly.com/badges/97f54ba1-19e2-46ed-bb9b-9000aaa08738/" title="Ver Certificado" target="_blank"><img src="dsmloops.png" alt="DS & MLOps"></a>
+                                <span>watsonx.ai Data Science and MLOps Sales Foundation</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/41e6cf57-3eeb-46a5-a42c-c24fcb307cfc/" title="Ver Certificado" target="_blank"><img src="genmod.png" alt="AI Models"></a>
+                                <span>watsonx.ai Generative AI Models Sales Foundation</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/e2fb7965-c8f0-4ca8-8ae0-dc90a22517f9/" title="Ver Certificado" target="_blank"><img src="dtp.png" alt="Design Thinking"></a>
+                                <span>Enterprise Design Thinking Practitioner</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/545e21e6-7162-4877-b568-5affd679318d/" title="Ver Certificado" target="_blank"><img src="data.png" alt="Data"></a>
+                                <span>watsonx.ai Data Preparation Sales Foundation</span>
                             </div>
                            
                         </div>
@@ -498,12 +597,12 @@ rel="stylesheet">
 
 
         <section id="section6">
-            <h2>Extracurricular</h2>
+            <h2>Extracurriculares</h2>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
-              <em>“He aquí mi secreto, que no puede ser más simple: Sólo con el corazón</em>
+              <em>“He aquí mi secreto, que no puede ser más simple: solo con el</em>
             </p>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-              <em>se puede ver correctamente; lo que es esencial</em>
+              <em>corazón se puede ver bien; lo esencial</em>
             </p>
             <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
               <em>es invisible a los ojos.” – Antoine de Saint-Exupéry, El Principito</em>
@@ -513,15 +612,15 @@ rel="stylesheet">
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459231431" target="_blank">
                   <figure>
-                    <img src='congreso.jpeg' alt='Volcano and lava field against a stormy sky'>
-                    <figcaption>Congreso de Informática<br>2023-A</figcaption>
+                    <img src='congreso.jpeg' alt='Volcán y campo de lava bajo un cielo tormentoso' draggable="false" oncontextmenu="return false;">
+                    <figcaption>Congreso de Ciencias de la Computación <br>2023-A</figcaption>
                   </figure>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459703976" target="_blank">
                   <figure>
-                    <img src='expo.jpeg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                    <img src='expo.jpeg' alt='Chico en bicicleta sobre un puente de madera con un bosque de fondo' draggable="false" oncontextmenu="return false;">
                     <figcaption>EXPO ESCOM 2024</figcaption>
                   </figure>
                 </a>
@@ -530,8 +629,8 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/5as2U_wV7h8" target="_blank">
                     <figure>
                         <figure>
-                            <img src='fil.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>FIL GUADALAJARA <br>(Globalmente la 2da más importante <br>Feria Internacional del Libro)</figcaption>
+                            <img src='fil.png' alt='Chico en bicicleta sobre un puente de madera con un bosque de fondo' draggable="false" oncontextmenu="return false;">
+                            <figcaption>FIL GUADALAJARA <br>(La 2da Feria Internacional del Libro <br>más importante del mundo)</figcaption>
                           </figure>
                 </a>
               </li>
@@ -539,8 +638,8 @@ rel="stylesheet">
                 <a href="https://www.instagram.com/thekoooi/" target="_blank">
                     <figure>
                         <figure>
-                            <img src='thk.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>@thekooi <br>Bordados en punto de cruz</figcaption>
+                            <img src='thk.png' alt='Chico en bicicleta sobre un puente de madera con un bosque de fondo' draggable="false" oncontextmenu="return false;">
+                            <figcaption>@thekooi <br>Bordado en Punto de Cruz</figcaption>
                           </figure>
                 </a>
               </li>
@@ -548,17 +647,17 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/mC68LRQSlW0" target="_blank">
                     <figure>
                         <figure>
-                            <img src='dvd.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>Arte & Experiencias</figcaption>
+                            <img src='dvd.jpg' alt='Chico en bicicleta sobre un puente de madera con un bosque de fondo' draggable="false" oncontextmenu="return false;">
+                            <figcaption>Arte y Experiencias</figcaption>
                           </figure>
                 </a>
               </li>
               <li>
-                <a href="https://youtube.com/shorts/4hjBUcG-Uqk?si=3q7_" target="_blank">
+                <a href="https://www.youtube.com/shorts/b8XrUSa-OnA" target="_blank">
                     <figure>
                         <figure>
-                            <img src='kr.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
-                            <figcaption>Coreano <br>Aprendizaje del idioma</figcaption>
+                            <img src='kr.jpg' alt='Chico en bicicleta sobre un puente de madera con un bosque de fondo' draggable="false" oncontextmenu="return false;">
+                            <figcaption>Aprendizaje del <br>Idioma Coreano</figcaption>
                           </figure>
                 </a>
               </li>
@@ -566,16 +665,16 @@ rel="stylesheet">
 
             <div id="goodbye">
                 <p style="font-family: 'Cormorant Garamond', serif; font-weight: 420; text-align: center; font-size: 1.5rem; margin-top: 40px;">
-                    Deja un corazón y te recomiendo un libro :)
+                    Deja un corazón y te recomendaré un libro :)
                 </p>
                 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
                     <button id="likeButton" style="background: none; border: none; cursor: pointer;">
-                        <img src="heart.png" alt="Heart" width="150" height="150">
+                        <img src="heart.png" alt="Corazón" width="150" height="150">
                     </button>
                     <span id="likeCount" style="font-size: 2rem;">0</span>
                 </div>
                 <p id="bookRecommendation" style="text-align: center; font-style: italic; margin-top: 10px;"></p>
-                <img id="bookCover" src="" alt="Book cover" style="display: none; width: 300px; height: 100%; margin-top: 10px; justify-self: center;">
+                <img id="bookCover" src="" alt="Portada del libro" style="display: none; width: 300px; height: 100%; margin-top: 10px; justify-self: center;">
             </div>
             
 
@@ -585,7 +684,7 @@ rel="stylesheet">
 
 
     <footer>
-        <p> <i class="corm-gar-reg-foot"> Made with ♡ from scratch, by  &copy;2025 Karla Esther Escamilla Gachuz. All rights reserved. <i></p>
+        <p> <i class="corm-gar-reg-foot"> Hecho con ♡ desde cero, por  &copy;2026 Karla Esther Escamilla Gachuz. Todos los derechos reservados. <i></p>
     </footer>
 
     <script src="ProfesionalProf.js"></script>
@@ -594,4 +693,3 @@ rel="stylesheet">
 
 </body>
 </html>
-
