@@ -115,98 +115,149 @@ header {
     z-index: 1000;
 }
 
+/* =========================================
+   NUEVO MENÚ LATERAL (Flotante, Negro y Rosa Neón)
+   ========================================= */
 
-.dots {
+.navbar {
+    position: fixed;
+    top: 50%; /* Lo empuja a la mitad de la pantalla */
+    transform: translateY(-50%); /* Lo centra perfectamente sobre su propio eje */
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px; /* Bordes redondeados en TODOS lados */
+    padding: 1.5rem 0; /* Espacio simétrico arriba y abajo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    height: max-content; /* Deja de estirarse, ahora solo mide lo que ocupa su contenido */
     display: flex;
-    gap: 5px;
-    cursor: pointer;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem; /* Separación limpia entre los iconos y los idiomas */
+    z-index: 9999;
 }
 
-.dot {
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-}
-
-.menu {
-    display: none; /* Ocultar el menú por defecto */
-    position: absolute;
-    top: 50px; /* Ajusta esta posición según sea necesario */
-    right: 0;
-    background: #333;
-    padding: 1em;
-    border-radius: .5cm;
+.navbar__menu {
+    position: relative;
     list-style: none;
-    margin: 0;
-    z-index: 1000;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu li a.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-}
-
-/* Mostrar el menú al pasar el ratón sobre los puntos/viñetas */
-.dots:hover + .menu,
-.menu:hover {
-    display: block;
-}
-
-/* Efecto hover en los enlaces del menú 
-.menu li a:hover {
-    text-decoration: underline;
-} */
-
-
-
-nav ul {
-    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    margin: 0.5em 0;
-}
-
-nav ul li a {
-    color: white;
+/* Reducimos ligeramente el ancho y el alto */
+.navbar__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.2rem; /* Ligeramente más chaparritos */
+    width: 3.8rem;  /* Ligeramente más esbeltos */
+    color: #586069; 
     text-decoration: none;
+    transition: color 250ms ease;
+    z-index: 2; 
 }
 
-nav ul li a:hover{
-    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Efecto de sombra */
-    transform: scale(1.05);
-}
-
-nav ul li a.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-}
-
-#language-switcher {
-    margin-top: 1em;
-    text-align: right;
-}
-
-#language-switcher button {
-    background: #444;
+/* Las etiquetas de texto flotantes */
+.navbar__link span {
+    position: absolute;
+    right: 100%;
+    transform: translateX(1rem);
+    margin-right: 1rem;
+    opacity: 0;
+    pointer-events: none;
     color: white;
-    border-radius: .5cm;
-    padding: 0.2em;
-    cursor: pointer;
-    margin-left: 0.5em;
+    background: #1a1a1a; /* NEGRO SÓLIDO ELEGANTE */
+    padding: 0.6rem 1rem;
+    transition: all 300ms cubic-bezier(0.68, -0.55, 0.26, 1.55); 
+    border-radius: 12px;
+    white-space: nowrap;
+    font-family: 'Space Mono', serif;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.navbar__link:hover {
+    color: #ffffff; 
+}
+
+.navbar__link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =========================================
+   LA BURBUJA NEGRA ANIMADA
+   ========================================= */
+
+.navbar__menu::before {
+    content: '';
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: #1a1a1a; /* NEGRO SÓLIDO */
+    border-radius: 14px;
+    left: 0.3rem; /* Lo centra en el nuevo ancho */
+    top: 0;
+    opacity: 0;
+    transition: top 400ms cubic-bezier(1, 0.2, 0.1, 1.2), opacity 200ms ease;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__menu:hover::before {
+    opacity: 1;
+}
+
+/* Nuevas matemáticas para la burbuja de 3.2rem */
+.navbar__menu:has(.navbar__item:nth-child(1):hover)::before { top: 0; }
+.navbar__menu:has(.navbar__item:nth-child(2):hover)::before { top: 3.2rem; }
+.navbar__menu:has(.navbar__item:nth-child(3):hover)::before { top: 6.4rem; }
+.navbar__menu:has(.navbar__item:nth-child(4):hover)::before { top: 9.6rem; }
+.navbar__menu:has(.navbar__item:nth-child(5):hover)::before { top: 12.8rem; }
+.navbar__menu:has(.navbar__item:nth-child(6):hover)::before { top: 16rem; }
+
+
+   /* =========================================
+   BOTONES DE IDIOMA (Rosa Pastel a Neón)
+   ========================================= */
+
+.navbar__langs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    /* Gradiente Rosa Pastel de base (suave y elegante) */
+    background: linear-gradient(135deg, #ffe6fa 0%, #ffb3e6 100%); 
+    color: #b224ef; /* Letra en morado oscuro para que contraste y se lea bien */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Space Mono', serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+}
+
+/* El efecto "Encendido Neón" */
+.lang-btn:hover, .lang-btn.active {
+    /* Gradiente Rosa Neón súper vibrante */
+    background: linear-gradient(135deg, #ff3385 0%, #ff66a3 100%);
+    color: white; /* La letra se vuelve blanca para resaltar */
+    /* Doble sombra para crear un efecto de luz o "glow" real */
+    box-shadow: 0 0 12px rgba(255, 51, 133, 0.6), 0 0 25px rgba(255, 51, 133, 0.3); 
+    transform: scale(1.1); /* Un pequeñísimo zoom para que se sienta interactivo */
+}
+
+
 
 section {
     height: 100vh;
@@ -451,54 +502,35 @@ footer {
 
 
 
+/* --- Fondo Oscuro para la Sección 2 --- */
+/* --- Fondo Oscuro con Imagen B&W para la Sección 2 --- */
 #section2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #dbdbdb; /* Fondo gris claro */
     position: relative;
-    color: black;
-    padding: 50px 0;
+    color: white; 
+    padding: 80px 0;
+    
+    /* Magia: Gradiente oscuro semitransparente + Imagen B&W + Efecto Parallax */
+    background: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&grayscale') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Esto hace que el fondo se quede quieto al hacer scroll */
 }
 
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: -500px;
-    width: 90%;
-    max-width: 2000px;
-    margin: 5px 0 0 0;
+#section2 h2, 
+#section2 .cssanimation {
+    color: white; 
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8); /* Sombrita para que resalte más el texto */
 }
 
-.softskills-grid {
-    display: grid !important;  /* Forzar grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: repeat(2, 1fr);   /* 2 filas */
-    gap: -500px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+#section2 > p {
+    color: #a3b3c4 !important; /* Un gris un poco más azulado y brillante */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
 }
 
-.softskill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.softskill img {
-    width: 80px; /* Ajusta según lo que necesites */
-    height: auto;
-}
-
-.softskill span {
-    font-size: 1.1em;
-    font-family: "Space Mono", serif;
-    flex: 1; 
-}
-
+/* --- Contenedor de la Categoría --- */
 .skill-category {
     display: flex;
     flex-direction: column;
@@ -506,45 +538,152 @@ footer {
     gap: 50px;
     text-align: center;
     margin: 5px 0 0 0;
+    position: relative; /* CRUCIAL: Esto permite colocar el neón detrás */
 }
 
-
-
-.technologies-grid {
-    display: grid !important; /* Forzar grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 15px;
-    width: 100%;
+/* --- La Magia: Los aros de neón dibujados con CSS detrás del icono --- */
+.skill-category::before {
+    content: "";
+    position: absolute;
+    top: -5px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px; /* Ligeramente más grande que tu icono */
+    height: 110px;
+    border-radius: 50%;
+    z-index: 0;
+    background-size: 300% 300%;
+    animation: glowWorm 4s ease infinite;
+    filter: blur(10px); /* Efecto de resplandor neón */
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    pointer-events: none; /* SÚPER IMPORTANTE: Evita que el brillo bloquee tu clic de JS */
 }
 
-.technology {
+/* Hacemos que el neón brille más al pasar el ratón */
+.skill-category:hover::before {
+    filter: blur(18px);
+    transform: translateX(-50%) scale(1.1);
+}
+/* --- Cuadrícula de 3 columnas para las categorías --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea exactamente 3 columnas del mismo tamaño */
+    gap: 60px 40px; /* 60px de espacio entre filas, 40px entre columnas */
+    width: 90%;
+    max-width: 1200px; /* Limita el ancho para que no se estire demasiado en monitores grandes */
+    margin: 40px auto 0 auto; /* El "auto" a los lados centra toda la cuadrícula */
+    justify-items: center; /* Centra los círculos de neón dentro de su columna */
+    align-items: start; /* Asegura que todos empiecen al mismo nivel superior */
+}
+
+/* (Opcional pero recomendado) Responsivo: Ajusta las columnas en pantallas más pequeñas */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Baja a 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Baja a 1 columna en celulares */
+    }
+}
+/* 6 Gradientes distintos para cada círculo */
+.skills-grid > .skill-category:nth-child(1)::before { background: linear-gradient(45deg, #00c6ff, #0072ff, #00f2fe); }
+.skills-grid > .skill-category:nth-child(2)::before { background: linear-gradient(45deg, #ff416c, #ff4b2b, #8a2387); }
+.skills-grid > .skill-category:nth-child(3)::before { background: linear-gradient(45deg, #f12711, #f5af19, #ff4e50); }
+.skills-grid > .skill-category:nth-child(4)::before { background: linear-gradient(45deg, #00ff87, #60efff, #00d2ff); }
+.skills-grid > .skill-category:nth-child(5)::before { background: linear-gradient(45deg, #fc00ff, #00dbde, #ff00cc); }
+.skills-grid > .skill-category:nth-child(6)::before { background: linear-gradient(45deg, #b224ef, #7579ff, #24c6dc); }
+
+/* --- Estilos para las banderitas y logos pequeños dentro de la lista --- */
+.skill {
     display: flex;
     align-items: center;
+    gap: 15px;
+}
+
+.skill img {
+    width: 35px; /* Mantiene los iconos pequeños */
+    height: 35px;
+    border-radius: 50%; /* Los hace perfectamente redondos */
+    object-fit: cover; /* Evita que se deformen */
+    background-color: #ffffff; /* Fondo blanco por si algún logo transparente es oscuro */
+    padding: 2px; /* Un bordecito sutil para que luzcan prolijos */
+}
+
+@keyframes glowWorm {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Solo se vuelven Grid cuando les haces clic (.active) --- */
+
+.skills-list.softskills-grid.active {
+    display: grid; /* Sobrescribe el flex para volverse cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas */
+    gap: 30px 15px; /* Espacio vertical y horizontal para que respiren */
+    justify-items: center;
+}
+
+.skills-list.technologies-grid.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* --- Estética de los iconos de Softskills --- */
+.softskill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 10px;
 }
 
+.softskill img {
+    width: 65px; /* Tamaño grande */
+    height: auto;
+    background: transparent; /* Quitamos el fondo blanquito de las banderas */
+    border-radius: 0;
+    padding: 0;
+}
+
+.softskill span {
+    font-size: 0.95em;
+    line-height: 1.2;
+    color: #e6e6e6; /* Texto claro para el modo oscuro */
+}
+
+/* --- Iconos Originales --- */
 .category-icon {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     cursor: pointer;
-    padding: 5px;
+    padding: 15px; /* Ajustamos para dar respiro al logo */
+    background-color: #161b22; /* Círculo oscuro para que el PNG no se pierda en el brillo */
+    position: relative;
+    z-index: 1; /* Se asegura de estar POR ENCIMA del neón */
+    object-fit: contain;
 }
 
 @keyframes bounce {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
+    50% { transform: scale(1.15); } /* Reduje un poquito el salto para que sea más elegante */
 }
 
 .category-icon:hover {
-    transform: scale(1.2); /* Hace el icono más grande */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más notoria */
-    filter: brightness(1.2); /* Aumenta el brillo de la imagen */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transform: scale(1.15); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8); 
+    filter: brightness(1.2); 
     animation: bounce 0.4s ease;
 }
 
+/* --- Ajuste de la Lista Desplegable al modo oscuro --- */
 .skills-list {
     display: none;
     flex-direction: column;
@@ -553,62 +692,28 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease, max-height 0.5s ease;
-    background-color: #eae2f7;
+    background-color: #1e232b; /* Cambiamos tu fondo lila por uno gris plomo elegante */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordecito de cristal */
     border-radius: 30px;
     padding: 20px;
     max-width: 2000px;
     margin: 5px 0 0 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
+
 .skills-list.active {
     display: flex;
     opacity: 1;
-    max-height: 800px; /* Ajusta esto según el tamaño de la lista */
+    max-height: 800px; 
 }
 
-.skill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
+/* Texto de las habilidades en modo oscuro */
 .skill span {
     font-size: 1.1em;
     font-family: "Space Mono", serif;
-    flex: 1; /* Para que el texto ocupe el espacio disponible */
+    flex: 1; 
+    color: #e6e6e6; /* Letra clara para que se lea bien en el gris oscuro */
 }
-
-.progress-bar {
-    width: 100%;
-    height: 25px;
-    background: #e0e0e0;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-}
-
-.progress {
-    height: 100%;
-    background: #333;
-    border-radius: 15px;
-    width: 0; /* Ancho inicial de la barra de progreso */
-    animation: loadProgress 2s ease-out forwards;
-}
-
-@keyframes loadProgress {
-    from {
-        width: 0;
-    }
-    to {
-        width: var(--progress-level);
-    }
-}
-
 
 #section3 {
     display: flex;
@@ -728,179 +833,280 @@ footer {
     position: relative;
 }
 
-.gallery {
-    --s: 130px;
-    display: grid;
+
+/* --- Isometric 3D Project Gallery --- */
+
+#section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Fondo ultra-oscuro con un destello neón turquesa en el centro */
+    background: radial-gradient(circle at center, #1a2a3a 0%, #101010 100%);
+    padding: 50px 0 20px 0;
+    color: white; /* Cambiamos el texto base a blanco para que se lea */
     position: relative;
-    place-items: center;
-    justify-self: center;
-    justify-content: center;
-    bottom: -35%;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden; 
 }
 
-.gallery-button {
-    position: absolute;
-    z-index: 2;
-    width: 80px;
-    height: 80px;
-    background: black;
-    color: white;
-    font-size: 4rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 500;
-    border-radius: 50%;
-    cursor: pointer;
+/* Aseguramos que los títulos y textos de la sección también sean blancos */
+#section4 h2,
+#section4 p,
+#section4 em {
+    color: white !important;
+}
+
+.grid {
+    width: 100%;
+    max-width: 50rem; /* Reduje un poco el ancho para que los cuadros no sean gigantes */
+    margin: -10px auto 10px auto; /* El -30px jala toda la galería hacia arriba */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 5;
+}
+
+.grid-block {
+    width: 33.33%; 
+    padding: 1rem; /* Un poco menos de espacio entre cuadros para que se vea más unida */
+}
+
+.image-grid {
+    /* El translateY sube la grilla 3D para compensar lo que se estira hacia abajo */
+    transform: translateY(-40px) rotateX(45deg) rotateZ(45deg);
+    perspective: 1000px;
+}
+
+.tile-img-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: top 0.2s ease-in, left 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+.tile-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.tile-link {
+    display: block;
+    text-decoration: none;
+}
+
+/* El texto oculto que aparece sobre la imagen */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Fondo un poco más oscuro para mejor lectura */
+    color: white;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform .7s;
-    z-index: 3;
-}
-
-.gallery-button:active {
-    transform: scale(0.9);
-}
-
-#gallery-toggle {
-    display: none;
-}
-
-.gallery-items {
-    position: absolute;
-    display: grid;
-    width: 0;
-    height: 0;
-    place-items: center;
-    gap: 5px;
-}
-
-.project img {
-    position: absolute;
-    width: var(--s);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    object-fit: cover;
-    transform: scale(0.5);
-    transition: transform 1s;
-    z-index: 2;
-}
-
-
-.project {
-    position: absolute;
-    display: grid;
-    width: 0;
-    height: 0;
-    place-items: center;
-    gap: 5px;
-}
-
-.project .description {
-    display: none;
-    position: absolute;
-    top: 20%;
-    left: 180%;
-    transform: translateY(-200%);
-    transform: translateX(160%);
-    background-color: #f7e2f2;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    z-index: 1;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-family: 'Space Mono', serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10; /* CRUCIAL: Esto asegura que el texto se renderice encima de la foto */
+    pointer-events: none; /* Evita que el texto cause parpadeos al pasar el ratón */
 }
 
-.project:hover .description {
-    display: block;
+/* Efectos Hover */
+.tile-link:hover .tile-img-wrapper {
+    top: -1rem;
+    left: -1rem;
 }
 
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(1) img { 
-    transform: rotate(0deg) translate(calc(2 * var(--s))) rotate(0deg);
-}
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(2) img {
-    transform: rotate(60deg) translate(calc(2 * var(--s))) rotate(-60deg);
-}
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(3) img {
-    transform: rotate(120deg) translate(calc(2 * var(--s))) rotate(-120deg);
-}
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(4) img {
-    transform: rotate(180deg) translate(calc(2 * var(--s))) rotate(-180deg);
-}
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(5) img {
-    transform: rotate(240deg) translate(calc(2 * var(--s))) rotate(-240deg);
-}
-#gallery-toggle:checked ~ .gallery-items .project:nth-of-type(6) img {
-    transform: rotate(300deg) translate(calc(2 * var(--s))) rotate(-300deg);
+.tile-link:hover .project-overlay {
+    opacity: 1;
 }
 
-#gallery-toggle:checked ~ .gallery-button {
-    transform: rotate(135deg);
-}
+/* Colores de las sombras 3D */
+.tile-link:hover .tile-img1 { box-shadow: 5px 5px rgba(244, 170, 200, 0.4), 10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2), 20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05); }
+.tile-link:hover .tile-img2 { box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3), 15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1), 25px 25px rgba(45, 186, 233, 0.05); }
+.tile-link:hover .tile-img3 { box-shadow: 5px 5px rgba(214, 221, 244, 0.4), 10px 10px rgba(214, 221, 244, 0.3), 15px 15px rgba(214, 221, 244, 0.2), 20px 20px rgba(214, 221, 244, 0.1), 25px 25px rgba(214, 221, 244, 0.05); }
+.tile-link:hover .tile-img4 { box-shadow: 5px 5px rgba(82, 119, 192, 0.4), 10px 10px rgba(82, 119, 192, 0.3), 15px 15px rgba(82, 119, 192, 0.2), 20px 20px rgba(82, 119, 192, 0.1), 25px 25px rgba(82, 119, 192, 0.05); }
+.tile-link:hover .tile-img5 { box-shadow: 5px 5px rgba(138, 218, 245, 0.4), 10px 10px rgba(138, 218, 245, 0.3), 15px 15px rgba(138, 218, 245, 0.2), 20px 20px rgba(138, 218, 245, 0.1), 25px 25px rgba(138, 218, 245, 0.05); }
+.tile-link:hover .tile-img6 { box-shadow: 5px 5px rgba(203, 215, 193, 0.4), 10px 10px rgba(203, 215, 193, 0.3), 15px 15px rgba(203, 215, 193, 0.2), 20px 20px rgba(203, 215, 193, 0.1), 25px 25px rgba(203, 215, 193, 0.05); }
 
+/* Barra de Demos */
 .demos {
     border-radius: 40px;
-    padding: 15px;
+    padding: 15px 25px;
+    display: flex;
     gap: 20px;
-    position: absolute;
-    bottom: 5%;
-    background-color: #fdeaf5;
+    /* Un fondo gris oscuro translúcido (efecto cristal) */
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
     font-family: 'Space Mono', serif;
     font-weight: 400;
+    color: white; /* Texto blanco */
+    margin-bottom: 20px;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.demos img{
-    width: 70px;
-    height: 70px;
+.demos img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    padding: 5px;
+    object-fit: cover;
 }
 
 .demos img:hover {
-    transform:scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 
+/* =========================================
+   EL VERDADERO Y ÚNICO #SECTION5 (Sin desbordamientos)
+   ========================================= */
 
-
-
-
-
-
+/* 1. Fondo y Textos Originales a salvo */
 #section5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: none; /* Fondo blanco para #section1 */
     position: relative;
     color: black;
     background: rgb(223,183,250);
     background: linear-gradient(90deg, rgba(223,183,250,1) 0%, rgba(255,196,196,1) 50%, rgba(255,181,204,1) 100%);
     padding: 50px 0;
-}
-.Certificates {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+    min-height: 100vh;
 }
 
-.Certificate {
+#section5 h2 {
+    color: black !important;
+}
+
+/* 2. CAJA FLOTANTE QUE "ABRAZA" EL CONTENIDO */
+#section5 .skills-list {
+    position: absolute;
+    top: 100%;
+    width: max-content; /* Magia: La caja crece o se encoge dependiendo de cuántas fotos tenga adentro */
+    max-width: 90vw;
+    z-index: 100;
+    margin-top: 25px;
+    background-color: #1e232b; 
+    border-radius: 30px;
+    padding: 25px;
+    box-sizing: border-box; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================
+   EL TRUCO DE ORO: Dirección de apertura según la columna
+   ========================================================== */
+
+/* Círculos de la izquierda (Ej. British Council): La caja se alinea a la izquierda y crece a la derecha */
+#section5 .skills-grid > .skill-category:nth-child(3n+1) .skills-list {
+    left: -20px;
+    transform: none;
+}
+
+/* Círculos del centro (Ej. HackerRank): La caja se centra perfectamente bajo el círculo */
+#section5 .skills-grid > .skill-category:nth-child(3n+2) .skills-list {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Círculos de la derecha (Ej. Microsoft): La caja se alinea a la derecha y crece hacia la izquierda (NUNCA MÁS SE SALDRÁ DE LA PANTALLA) */
+#section5 .skills-grid > .skill-category:nth-child(3n) .skills-list {
+    left: auto;
+    right: -20px;
+    transform: none;
+}
+
+/* 3. CONTENEDOR INTERNO FLEXIBLE */
+#section5 .skills-list.active .Certificates {
+    display: flex; /* Cambiamos grid por flex para que las imágenes manden sobre el tamaño */
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+#section5 .Certificate {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
 }
 
-.Certificate img{
-    width: 250px;
+/* 4. IMÁGENES EXACTAMENTE DEL ANCHO QUE PEDISTE */
+#section5 .Certificate img {
+    width: 280px !important; /* FIJO: Tal cual lo pediste */
+    height: auto !important; /* Mantiene la proporción original sin deformar */
+    object-fit: contain; 
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
 }
 
-.Certificate img:hover{
-    transform:scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+#section5 .Certificate img:hover {
+    transform: scale(1.4); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    z-index: 200;
+    position: relative;
+    background-color: #1e232b; 
 }
+
+#section5 .Certificate span {
+    color: #ffffff;
+    font-family: "Space Mono", serif;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    line-height: 1.3;
+    max-width: 270px; /* Evita que el texto de Microsoft quede en una sola línea eterna */
+    word-wrap: break-word;
+}
+
+/* ==========================================================
+   CELULARES Y TABLETS: Modo Popup Central
+   ========================================================== */
+@media (max-width: 900px) {
+    #section5 .skills-grid > .skill-category .skills-list {
+        position: fixed; /* En móviles, forzamos que salga en el puro centro de la pantalla */
+        top: 50%;
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, -50%) !important;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* 5. CÍRCULOS Y NEONES MANTENIDOS */
+#section5 .category-icon { background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(5px); }
+#section5 .skills-grid > .skill-category:nth-child(1)::before { background: linear-gradient(45deg, #ff9a9e, #fecfef, #fbc2eb); }
+#section5 .skills-grid > .skill-category:nth-child(2)::before { background: linear-gradient(45deg, #a18cd1, #fbc2eb, #e0c3fc); }
+#section5 .skills-grid > .skill-category:nth-child(3)::before { background: linear-gradient(45deg, #fad0c4, #ffd1ff, #ff9a9e); }
+#section5 .skills-grid > .skill-category:nth-child(4)::before { background: linear-gradient(45deg, #ffecd2, #fcb69f, #ff9a9e); }
+#section5 .skills-grid > .skill-category:nth-child(5)::before { background: linear-gradient(45deg, #cfd9df, #e2ebf0, #a1c4fd); }
+#section5 .skills-grid > .skill-category:nth-child(6)::before { background: linear-gradient(45deg, #fccb90, #d57eeb, #fbc2eb); }
+
+
+
 
 
 #section6 {
@@ -1172,4 +1378,3 @@ h2 {
         opacity: 1;
     }
 }
-
