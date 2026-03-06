@@ -21,6 +21,7 @@ rel="stylesheet">
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 
@@ -43,26 +44,34 @@ rel="stylesheet">
 
     </div>
     <header>
-        <nav id="menu">
-            <ul class="dots">
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-                <li class="dot">•</li>
-            </ul>
-            <ul class="menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#section2" class="nav-link">Skills</a></li>
-                <li><a href="#section3" class="nav-link">Experience</a></li>
-                <li><a href="#section4" class="nav-link">Projects</a></li>
-                <li><a href="#section5" class="nav-link">Certifications</a></li>
-                <li><a href="#section6" class="nav-link">Extracurricular</a></li>
-            </ul>
-        </nav>
-        <div id="language-switcher">
-            <a href="ProfesionalProf_Esp.html"><button data-lang="es">ES</button></a>
-            <a href="ProfesionalProf.html"><button data-lang="en">EN</button></a>
-            <a href="ProfesionalProf_Kor.html"><button data-lang="ko">KO</button></a>
-        </div>
+        <nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="#section1" class="navbar__link"><i data-feather="home"></i><span>Inicio</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section2" class="navbar__link"><i data-feather="star"></i><span>Skills</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="#section3" class="navbar__link"><i data-feather="briefcase"></i><span>Experiencia</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section4" class="navbar__link"><i data-feather="folder"></i><span>Proyectos</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section5" class="navbar__link"><i data-feather="award"></i><span>Certificados</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#section6" class="navbar__link"><i data-feather="activity"></i><span>Extra</span></a>        
+    </li>
+  </ul>
+
+  <div class="navbar__langs">
+    <a href="ProfesionalProf_Esp.html" class="lang-btn active">ES</a>
+    <a href="#" class="lang-btn">EN</a>
+    <a href="ProfesionalProf_Kor.html" class="lang-btn">KO</a>
+  </div>
+</nav>
     </header>
 
 
@@ -319,27 +328,27 @@ rel="stylesheet">
 
             <div class="fun-gallery-container">
             <div class="gallery-item">
-                <img src="jst.png" alt="TOJIL">
+                <img src="jst.png" alt="TOJIL" draggable="false" oncontextmenu="return false;">
                 <div class="gallery-phrase">TOJIL Data Analyst <br>Delictive rate modeling and 100% automation 🚓</div>
             </div>
             
             <div class="gallery-item">
-                <img src="cic.jpeg" alt="CIC">
+                <img src="cic.jpeg" alt="CIC" draggable="false" oncontextmenu="return false;">
                 <div class="gallery-phrase">CIC IPN NLP Lab Research Assistant 🤖</div>
             </div>
             
             <div class="gallery-item">
-                <img src="me_ibm.jpeg" alt="IBM">
+                <img src="me_ibm.jpeg" alt="IBM" draggable="false" oncontextmenu="return false;">
                 <div class="gallery-phrase">IBM Global Technical Sales Intern 🌍</div>
             </div>
             
             <div class="gallery-item">
-                <img src="ibm.jpeg" alt="DATA">
+                <img src="ibm.jpeg" alt="DATA" draggable="false" oncontextmenu="return false;">
                 <div class="gallery-phrase">Promoted to IBM Data & AI Sales Student ✨</div>
             </div>
 
             <div class="gallery-item">
-                <img src="qtm.jpeg" alt="Quant">
+                <img src="qtm.jpeg" alt="Quant" draggable="false" oncontextmenu="return false;">
                 <div class="gallery-phrase">Quantum Computing alumni with PhD. Sun Guohua 🖳</div>
             </div>
         </div>
@@ -360,51 +369,101 @@ rel="stylesheet">
 
 
         <section id="section4">
-            <h2>Projects</h2>
-            <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
-                <em>“The moment you doubt whether you can fly, </em></p>
-                <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
-                <em>you cease forever to be able to do it” – Peter Pan by J.M. Barrie</em>
-            </p>
-            
-            <div class="gallery">
-                <input type="checkbox" id="gallery-toggle">
-                <label for="gallery-toggle" class="gallery-button">+</label>
-                <div class="gallery-items">
-                    <div class="project">
-                        <img src="investment.jpg" alt="MIA CETSDIRECTO" style="--i:1">
-                        <div class="description">CETESDIRECTO® Investor Support Tool: Modeling the behavior of inflation and its impact on financial decisions (Python, Regression, Machine Learning).</div>
+    <h2>Proyectos</h2>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; font-style: normal; text-align: center;">
+        <em>“El momento en que dudas si puedes volar, </em></p>
+    <p style="font-family: 'Space Mono', serif; font-weight: 400; margin-top: -10px; font-style: normal; text-align: center;">
+        <em>dejas para siempre de poder hacerlo” – Peter Pan por J.M. Barrie</em>
+    </p>
+
+    <div class="grid image-grid">
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1gZsUCALPb0q2ArJP2OmHjlhNp1UNgz-e?usp=sharing">
+                    <div class="tile-img-wrapper tile-img1">
+                        <img class="tile-img" src="ai.jpg" alt="ATR-TTS">
+                        <div class="project-overlay">
+                            <strong>Multilingual Speech Synthesizer (ATR-TTS)</strong><br>
+                            Speech recognition, machine translation and speech synthesis (Whisper, NLLB, Bark and Python)
+                        </div>
                     </div>
-                    <div class="project">
-                        <img src="amazon.jpg" alt="SAVE-A" style="--i:2">
-                        <div class="description">Product comparator friendly web application with Python and Data Science methods, make the best purchase decision (Python, Web Scrapping, EDA).</div>
-                    </div>
-                    <div class="project">
-                        <img src="library.jpg" alt="Bookry" style="--i:3">
-                        <div class="description">Electronic library using MERN technologies (MongoDB, Express, React, Node.js) with an optimized database design for scalability and security. Presented at Expo ESCOM 2024, achieving 3rd place.</div>
-                    </div>
-                    <div class="project">
-                        <img src="gming.jpg" alt="PinkPacman" style="--i:4">
-                        <div class="description">Pacman game simulation with pink mazes using C structures and functions.</div>
-                    </div>
-                    <div class="project">
-                        <img src="pcar.jpg" alt="EDA-Public Safety" style="--i:5">
-                        <div class="description">Exploratory data Analysis for National Survey on Victimization and Perception of Public Safety (ENVIPE) 2024.</div>
-                    </div>
-                    <div class="project">
-                        <img src="medical.jpg" alt="Diabetes Model" style="--i:6">
-                        <div class="description">Diabetes Diagnistic Prediction Model with Diabetes Health Indicators from the CDC (Centers for Disease Control and Prevention).</div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="demos">
-                <p style="margin-top: -.5px;">Demos</p>
-                <a href="https://github.com/Karlah-0/paper-similarity" title="NLP: Document Similairty" target="_blank"><img src="keyb.jpg" alt="Similarity"></a>
-                <a href="https://github.com/Karlah-0/SAVE-A/blob/main/SAVE-A/SAVE-A.ipynb" title="SAVE-A" target="_blank"><img src="amzn.jpg" alt="SAVE-A"></a>
-                <a href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" title="Perception of Public Safety" target="_blank"><img src="seg.jpg" alt="ENVIPE EDA"></a>
-                <a href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb" title="Diabetes Diagnosis Prediction" target="_blank"><img src="diabetes.jpg" alt="Diabetes Prediction"></a>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Credit-Card-Fraud-Detection/blob/main/collect/Credit_Card_Fraud_Detection_Data_Science.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img2">
+                        <img class="tile-img" src="cards.jpg" alt="Credit">
+                        <div class="project-overlay">
+                            <strong>Credit Card Fraud Detection</strong><br>
+                            Exploratory Data Analysis (EDA), predictive fraud modeling and analysis of a fake credit card dataset.
+                        </div>
+                    </div>
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/Diabetes-Diagnostic-Prediction-Model-Advanced-Statistics-/blob/main/ProyectoFinalEA_Diabetes.ipynb">
+                    <div class="tile-img-wrapper tile-img3">
+                        <img class="tile-img" src="diab.jpg" alt="Diabetes">
+                        <div class="project-overlay">
+                            <strong>Diabetes Diagnostic Prediction</strong><br>
+                            Prediction Model with Diabetes Health Indicators from the CDC (Centers for Disease Control and Prevention).
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://colab.research.google.com/drive/1nP87hcrevlORvgSKpnq5O0cksqwAh-bK?usp=sharing">
+                    <div class="tile-img-wrapper tile-img4">
+                        <img class="tile-img" src="senty.jpg" alt="Sentiment Polarity">
+                        <div class="project-overlay">
+                            <strong>NLP Sentiment Polarity</strong><br>
+                            Sentiment analysis of cinema reviews based on ranking (XGBOOST, K-Means, Random Forest and SVM testing)
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://docs.google.com/presentation/d/1tRFyvta4QiCx6mgxQzlW7PYf1_ALZSN0fZTedvfK2x4/edit?usp=sharing" target="_blank">
+                    <div class="tile-img-wrapper tile-img5">
+                        <img class="tile-img" src="bait.jpg" alt="EDA-Public Safety">
+                        <div class="project-overlay">
+                            <strong>Clickbait Detection</strong><br>
+                            Machine learning model for detecting whether a text is a clickbait or not. (Trad ML and LLMs)
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <div class="tile">
+                <a class="tile-link" href="https://github.com/Karlah-0/EDA-Perception-of-Public-Safety/blob/main/Incidencia_Delictiva.ipynb" target="_blank">
+                    <div class="tile-img-wrapper tile-img6">
+                        <img class="tile-img" src="sf.jpg" alt="Crime">
+                        <div class="project-overlay">
+                            <strong>Crime Rate</strong><br>
+                            Exploratory data Analysis for National Survey on Victimization and Perception of Public Safety (ENVIPE) 2024.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
         
         
         
@@ -508,13 +567,25 @@ rel="stylesheet">
                 </div>
                 
                 <div class="skill-category" style="margin-top: 50px;">
-                    <img src="gl.png" class="category-icon" alt="Softskills Icon">
-                    <h3 class="cssanimation hu__hu__">Other Certifications</h3>
+                    <img src="logo-ibm.png" class="category-icon" alt="Softskills Icon">
+                    <h3 class="cssanimation hu__hu__">IBM Certifications</h3>
                     <div class="skills-list">
                         <div class="Certificates">
                             <div class="Certificate">
-                                <a href="https://drive.google.com/file/d/1QB7mE3sVGi8b8lsuNNnpjIzUp2WQ5OZF/view?usp=sharing" title="View Certificate" target="_blank"><img src="Cripto.png" alt="Cryptocurrencies"></a>
-                                <span>Training in Cryptocurrencies & Blockchain</span>
+                                <a href="https://www.credly.com/badges/97f54ba1-19e2-46ed-bb9b-9000aaa08738/" title="View Certificate" target="_blank"><img src="dsmloops.png" alt="DS & MLOps"></a>
+                                <span>watsonx.ai Data Science and MLOps Sales Foundation</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/41e6cf57-3eeb-46a5-a42c-c24fcb307cfc/" title="View Certificate" target="_blank"><img src="genmod.png" alt="AI Models"></a>
+                                <span>watsonx.ai Generative AI Models Sales Foundation</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/e2fb7965-c8f0-4ca8-8ae0-dc90a22517f9/" title="View Certificate" target="_blank"><img src="dtp.png" alt="Design Thinking"></a>
+                                <span>Enterprise Design Thinking Practitioner</span>
+                            </div>
+                            <div class="Certificate">
+                                <a href="https://www.credly.com/badges/545e21e6-7162-4877-b568-5affd679318d/" title="View Certificate" target="_blank"><img src="data.png" alt="Data"></a>
+                                <span>watsonx.ai Data Preparation Sales Foundation</span>
                             </div>
                            
                         </div>
@@ -541,7 +612,7 @@ rel="stylesheet">
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459231431" target="_blank">
                   <figure>
-                    <img src='congreso.jpeg' alt='Volcano and lava field against a stormy sky'>
+                    <img src='congreso.jpeg' alt='Volcano and lava field against a stormy sky' draggable="false" oncontextmenu="return false;">
                     <figcaption>Computer Science Congress <br>2023-A</figcaption>
                   </figure>
                 </a>
@@ -549,7 +620,7 @@ rel="stylesheet">
               <li>
                 <a href="https://www.linkedin.com/in/karlaescamillag/overlay/education/798440565/multiple-media-viewer/?profileId=ACoAADuRJEkBG-t7TST_fxVLL-CHr-5XBXGjyrw&treasuryMediaId=1738459703976" target="_blank">
                   <figure>
-                    <img src='expo.jpeg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                    <img src='expo.jpeg' alt='Guy on a bike on a wooden bridge with a forest backdrop' draggable="false" oncontextmenu="return false;">
                     <figcaption>EXPO ESCOM 2024</figcaption>
                   </figure>
                 </a>
@@ -558,7 +629,7 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/5as2U_wV7h8" target="_blank">
                     <figure>
                         <figure>
-                            <img src='fil.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                            <img src='fil.png' alt='Guy on a bike on a wooden bridge with a forest backdrop' draggable="false" oncontextmenu="return false;">
                             <figcaption>FIL GUADALAJARA <br>(World's 2nd most important <br>International Book Fair)</figcaption>
                           </figure>
                 </a>
@@ -567,7 +638,7 @@ rel="stylesheet">
                 <a href="https://www.instagram.com/thekoooi/" target="_blank">
                     <figure>
                         <figure>
-                            <img src='thk.png' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                            <img src='thk.png' alt='Guy on a bike on a wooden bridge with a forest backdrop' draggable="false" oncontextmenu="return false;">
                             <figcaption>@thekooi <br>Cross-stitch Embroidery</figcaption>
                           </figure>
                 </a>
@@ -576,7 +647,7 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/mC68LRQSlW0" target="_blank">
                     <figure>
                         <figure>
-                            <img src='dvd.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                            <img src='dvd.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop' draggable="false" oncontextmenu="return false;">
                             <figcaption>Art & Experiences</figcaption>
                           </figure>
                 </a>
@@ -585,7 +656,7 @@ rel="stylesheet">
                 <a href="https://www.youtube.com/shorts/b8XrUSa-OnA" target="_blank">
                     <figure>
                         <figure>
-                            <img src='kr.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop'>
+                            <img src='kr.jpg' alt='Guy on a bike on a wooden bridge with a forest backdrop' draggable="false" oncontextmenu="return false;">
                             <figcaption>Korean <br>Language Learning</figcaption>
                           </figure>
                 </a>
@@ -622,5 +693,4 @@ rel="stylesheet">
 
 </body>
 </html>
-
 
